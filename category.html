@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Avtomobilski nadstreški — LUROS</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,700;1,9..144,300;1,9..144,700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="category.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+    <a href="index.html"><img class="logo-img" src="images/logo.png" alt="LUROS"></a>
+    <div style="display: flex; gap: 20px; align-items: center;">
+        <ul class="nav-links">
+            <li><a href="#" class="act" onclick="openMenu(event)">Ponudba</a></li>
+            <li><a href="#">Reference</a></li>
+            <li><a href="#">O nas</a></li>
+            <li><a href="#">Kontakt</a></li>
+        </ul>
+        <a href="#" class="nav-cta">Brezplačna ponudba</a>
+    </div>
+</nav>
+
+<!-- FULLSCREEN MENU OVERLAY -->
+<div id="menu-overlay">
+  <button class="mo-close" onclick="closeMenu()">
+    <svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
+
+  <div class="mo-left">
+    <div class="mo-heading">Naša ponudba</div>
+    <div class="mo-grid">
+
+      <div class="mo-cat" onclick="window.location='category.html'">
+        <div class="mo-cat-img"><img src="images/avtomobilski_nadstresek.jpg" alt="Avtomobilski nadstreški"></div>
+        <div class="mo-cat-body">
+          <div class="mo-cat-title">Avtomobilski nadstreški</div>
+          <ul class="mo-cat-items">
+            <li>Nadstrešek serije LJW</li>
+            <li>Nadstrešek serije JM</li>
+            <li>Nadstrešek serije JT</li>
+            <li>Serije VD in VDS</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mo-cat" onclick="closeMenu()">
+        <div class="mo-cat-img"><img src="images/nadstreski_trasa.png" alt="Nadstreški za teraso"></div>
+        <div class="mo-cat-body">
+          <div class="mo-cat-title">Nadstreški za teraso</div>
+          <ul class="mo-cat-items">
+            <li>Nadstrešek za teraso 1</li>
+            <li>Nadstrešek za teraso 2</li>
+            <li>Nadstrešek za teraso 3</li>
+            <li>Nadstrešek za teraso 4–5</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mo-cat" onclick="closeMenu()">
+        <div class="mo-cat-img"><img src="images/pergola_lamele.jpg" alt="Pergole z vrtljivimi lamelami"></div>
+        <div class="mo-cat-body">
+          <div class="mo-cat-title">Pergole z lamelami</div>
+          <ul class="mo-cat-items">
+            <li>Pergola 1</li>
+            <li>Pergola 2</li>
+            <li>Pergola 3</li>
+            <li>Pergola 4 &amp; 5</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mo-cat" onclick="closeMenu()">
+        <div class="mo-cat-img"><img src="images/pergotende.jpg" alt="Pergotende in tende"></div>
+        <div class="mo-cat-body">
+          <div class="mo-cat-title">Pergotende in tende</div>
+          <ul class="mo-cat-items">
+            <li>Pergotenda 1</li>
+            <li>Pergotenda 2</li>
+            <li>Pergotenda 3</li>
+            <li>Tende 4 &amp; 5</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mo-cat" onclick="closeMenu()">
+        <div class="mo-cat-img"><img src="images/horizontalni_screeni.jpg" alt="Horizontalni screeni"></div>
+        <div class="mo-cat-body">
+          <div class="mo-cat-title">Horizontalni screeni</div>
+          <ul class="mo-cat-items">
+            <li>Horizontalni screen 1</li>
+            <li>Horizontalni screen 2</li>
+            <li>Horizontalni screen 3</li>
+            <li>Screen 4 &amp; 5</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mo-cat" onclick="closeMenu()">
+        <div class="mo-cat-img"><img src="images/screeni_zip.jpg" alt="Screeni, zip screeni"></div>
+        <div class="mo-cat-body">
+          <div class="mo-cat-title">Screeni, zip screeni</div>
+          <ul class="mo-cat-items">
+            <li>ZIP screen 1</li>
+            <li>ZIP screen 2</li>
+            <li>ZIP screen 3</li>
+            <li>ZIP screen 4 &amp; 5</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="mo-right">
+    <div>
+      <ul class="mo-nav-links">
+        <li><a href="#" onclick="closeMenu()">Reference</a></li>
+        <li><a href="#" onclick="closeMenu()">O nas</a></li>
+        <li><a href="#" onclick="closeMenu()">Kontakt</a></li>
+      </ul>
+    </div>
+    <div class="mo-brand">
+      <p class="mo-brand-desc">Premium nadstreški, pergole in sistemi za senčenje. Kakovostne rešitve po meri za vaš zunanji prostor.</p>
+      <div class="mo-brand-meta">
+        <div><strong>Pon–Čet</strong> · 7.00–17.00</div>
+        <div><strong>Petek</strong> · 7.00–15.00</div>
+        <div><strong>Sob</strong> · 8.00–12.00</div>
+      </div>
+      <div class="mo-brand-meta" style="margin-top:12px">
+        <div><strong>Tel</strong> · +386 31 400 340</div>
+        <div><strong>Mail</strong> · info@lurus.si</div>
+      </div>
+      <a href="#" class="mo-cta" onclick="closeMenu()">Brezplačna ponudba →</a>
+    </div>
+  </div>
+</div>
+
+
+<!-- ── HERO ── -->
+<section class="cat-hero">
+  <div class="hero-grid">
+    <div class="fade-up">
+      <div class="hero-label">Kategorija</div>
+      <h1>Avtomobilski<br><em>nadstreški</em></h1>
+      <p class="cat-hero-sub">Ne ponujamo le zaščite za vozilo, temveč estetsko dovršen arhitekturni element, ki se popolnoma ujame z vašim domom.</p>
+      <p class="cat-hero-sub2">Naši sistemi so odporni na vse vremenske razmere, prilagodljivi po meri in izdelani iz najkakovostnejših materialov.</p>
+      <a href="#" class="btn-accent" style="max-width: 200px;">
+        <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        Povpraševanje
+      </a>
+    </div>
+    <div class="fade-up d1">
+      <div class="hero-img-wrap">
+        <img src="images/avtomobilski_nadstresek.jpg" alt="Avtomobilski nadstrešek">
+        <div class="hero-img-chip">
+          <div class="chip-n">500<sup style="font-size:14px;opacity:.6">+</sup></div>
+          <div class="chip-l">Montiranih nadstreškov</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── WHY ── -->
+<section class="why">
+  <div class="why-inner">
+
+    <div class="left-col">
+
+      <div class="content-block fade-up">
+        <div class="cb-img">
+          <img src="images/referenca.jpg" alt="Kakovost">
+          <div class="cb-img-overlay"></div>
+        </div>
+        <div class="cb-text">
+          <div class="cb-tag">Kakovost</div>
+          <div class="cb-title">Izbrani materiali</div>
+          <p class="cb-body">Naša zaveza kakovosti stoji v središču vsakega izdelka, ki ga ponujamo. Z posebej izbranimi materiali zagotavljamo dolgotrajno delovanje, estetski videz in minimalno vzdrževanje.</p>
+        </div>
+      </div>
+
+      <div class="content-block reverse fade-up d1">
+        <div class="cb-text">
+          <div class="cb-tag">Trajnostnost</div>
+          <div class="cb-title">Trajnostna rešitev</div>
+          <p class="cb-body">Zavedamo se pomena trajnostne gradnje. Zato izbiramo nadstreške, ki vrednost doma povečujejo in zmanjšujejo obremenitev okolice.</p>
+        </div>
+        <div class="mid-card">
+          <img src="images/pergola_lamele.jpg" alt="Trajnostnost">
+          <div class="mid-card-overlay"></div>
+          <div class="mid-card-badge">Trajnostna gradnja</div>
+        </div>
+      </div>
+
+      <div class="content-block fade-up d2">
+        <div class="cb-img">
+          <img src="images/avtomobilski_nadstresek.jpg" alt="Tehnologija">
+          <div class="cb-img-overlay"></div>
+        </div>
+        <div class="cb-text">
+          <div class="cb-tag">Inovacije</div>
+          <div class="cb-title">Tehnološka dovršenost</div>
+          <p class="cb-body">Z rednim spremljanjem sodobnih inovacij in tehnologij rešujemo udobje — od integriranega LED osvetljevanja do avtomatiziranega senčenja elementov.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="why-right fade-up d1">
+      <div class="why-eyebrow">Zakaj mi</div>
+      <div class="why-title">Zakaj izbrati naš<br><em>avtomobilski nadstrešek?</em></div>
+      <p class="why-body">Vsak nadstrešek ni le konstrukcija, temveč pomemben del vašega bivanja. Zato k vsakemu projektu pristopamo individualno — z veliko mero pozornosti, strokovnosti in prilagodljivosti. Od svetovanja do montaže — z vami smo na vsakem koraku.</p>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ── PRODUCTS ── -->
+<section class="products">
+  <div class="products-inner">
+      <div class="sec-head fu" style="margin-bottom:24px;">
+          <div><div class="st2">Naši <em>izdelki</em></div>
+          <small>Naj se vaš dom ne začne šele za vrati. Začnite ga graditi z dovršenim nadstreškom.</small></div>
+      </div>
+
+    <!-- ── FILTER BAR ── -->
+    <div class="filter-bar fade-up">
+      <div class="filter-divider"></div>
+
+      <!-- Group 1: Število vozil (radio) -->
+      <div>
+        <div class="filter-group-label">
+          1. Število vozil
+        </div>
+        <div class="filter-options" id="grp-vozila">
+          <div class="fo" data-group="vozila" data-val="1" onclick="selectFo(this,'vozila')">
+            <div class="fo-radio"></div>
+            <div class="fo-icon"><span class="material-icons">directions_car</span></div>
+            <div class="fo-label">1 vozilo</div>
+          </div>
+          <div class="fo" data-group="vozila" data-val="2" onclick="selectFo(this,'vozila')">
+            <div class="fo-radio"></div>
+            <div class="fo-icon"><span class="material-icons">local_shipping</span></div>
+            <div class="fo-label">2 vozili</div>
+          </div>
+          <div class="fo" data-group="vozila" data-val="3" onclick="selectFo(this,'vozila')">
+            <div class="fo-radio"></div>
+            <div class="fo-icon"><span class="material-icons">airport_shuttle</span></div>
+            <div class="fo-label">3 ali več vozil</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Group 2: Oblika nadstreška (checkbox) -->
+      <div>
+        <div class="filter-group-label">
+          2. Oblika nadstreška
+        </div>
+        <div class="filter-options" id="grp-oblika">
+          <div class="fo" data-group="oblika" data-val="konzolni" onclick="toggleFo(this)">
+            <div class="fo-check"></div>
+            <div class="fo-icon"><span class="material-icons">roofing</span></div>
+            <div class="fo-label">Konzolni</div>
+          </div>
+          <div class="fo" data-group="oblika" data-val="stebri" onclick="toggleFo(this)">
+            <div class="fo-check"></div>
+            <div class="fo-icon"><span class="material-icons">garage</span></div>
+            <div class="fo-label">Na 4 stebrih</div>
+          </div>
+          <div class="fo" data-group="oblika" data-val="meri" onclick="toggleFo(this)">
+            <div class="fo-check"></div>
+            <div class="fo-icon"><span class="material-icons">design_services</span></div>
+            <div class="fo-label">Po meri</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- result strip -->
+      <div class="filter-result-strip">
+        <span class="material-icons">filter_list</span>
+        Prikazujem <strong id="resultCount">12</strong> izdelkov
+        <div class="filter-tags" id="filterTags"></div>
+        <a class="fg-reset" onclick="resetAll()" style="margin-left:auto">Ponastavi vse</a>
+      </div>
+    </div>
+
+    <div class="products-grid" id="productsGrid">
+
+      <!-- Row 1 -->
+      <div class="product-card fade-up" data-vozila="1" data-oblika="konzolni" onclick="window.location='product.html'" style="cursor:pointer">
+        <img src="images/kategorije/nadstresek_serij_ljw.jpg" alt="Nadstrešek serije LJW">
+        <div class="pc-overlay"></div>
+        <div class="pc-info">
+          <div class="pc-name">Nadstrešek serije LJW</div>
+          <div class="pc-arrow"><svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
+        </div>
+      </div>
+      <div class="product-card fade-up d1" data-vozila="1" data-oblika="stebri">
+        <img src="images/kategorije/nadstresek_serije_jm.jpg" alt="Nadstrešek serije JM">
+        <div class="pc-overlay"></div>
+        <div class="pc-info">
+          <div class="pc-name">Nadstrešek serije JM</div>
+          <div class="pc-arrow"><svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
+        </div>
+      </div>
+      <div class="product-card fade-up d2" data-vozila="1" data-oblika="meri">
+        <img src="images/kategorije/nadstresek_serije_jt.jpg" alt="Nadstrešek serije JT">
+        <div class="pc-overlay"></div>
+        <div class="pc-info">
+          <div class="pc-name">Nadstrešek serije JT</div>
+          <div class="pc-arrow"><svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
+        </div>
+      </div>
+
+      <!-- Row 2 -->
+      <div class="product-card fade-up" data-vozila="1" data-oblika="konzolni">
+        <img src="images/kategorije/nadstresek_serije_pjr_1_vozilo.jpg" alt="Nadstrešek serije PJR - 1 vozilo">
+        <div class="pc-overlay"></div>
+        <div class="pc-info">
+          <div class="pc-name">Nadstrešek serije PJR - 1 vozilo</div>
+          <div class="pc-arrow"><svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
+        </div>
+      </div>
+      <div class="product-card fade-up d1" data-vozila="2" data-oblika="stebri">
+        <img src="images/kategorije/nadstresek_serije_pjr_2ali_vec.jpg" alt="Nadstrešek serije PJR - 2 ali več vozil">
+        <div class="pc-overlay"></div>
+        <div class="pc-info">
+          <div class="pc-name">Nadstrešek serije PJR - 2 ali več vozil</div>
+          <div class="pc-arrow"><svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
+        </div>
+      </div>
+      <div class="product-card fade-up d2" data-vozila="2" data-oblika="stebri">
+        <img src="images/kategorije/nadstresek_serijepjr_mc.jpg" alt="Nadstrešek serije PJR - MC">
+        <div class="pc-overlay"></div>
+        <div class="pc-info">
+          <div class="pc-name">Nadstrešek serije PJR - MC</div>
+          <div class="pc-arrow"><svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
+        </div>
+      </div>
+
+      <!-- Row 3 -->
+      <div class="product-card fade-up" data-vozila="1" data-oblika="konzolni">
+        <img src="images/kategorije/nadstresek_serije_VD_1.jpg" alt="Nadstrešek serije VD - 1 vozilo">
+        <div class="pc-overlay"></div>
+        <div class="pc-info">
+          <div class="pc-name">Nadstrešek serije VD - 1 vozilo</div>
+          <div class="pc-arrow"><svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
+        </div>
+      </div>
+      <div class="product-card fade-up d1" data-vozila="2" data-oblika="konzolni">
+        <img src="images/kategorije/nadstresek_serije_VD_LC_2.jpg" alt="Nadstrešek serije VD - LC za 2 ali več">
+        <div class="pc-overlay"></div>
+        <div class="pc-info">
+          <div class="pc-name">Nadstrešek serije VD - LC za 2 ali več</div>
+          <div class="pc-arrow"><svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
+        </div>
+      </div>
+      <div class="product-card fade-up d2" data-vozila="2" data-oblika="stebri">
+        <img src="images/kategorije/nadstresek_serije_vd_mc_2.jpg" alt="Nadstrešek serije VD - MC za 2 ali več">
+        <div class="pc-overlay"></div>
+        <div class="pc-info">
+          <div class="pc-name">Nadstrešek serije VD - MC za 2 ali več</div>
+          <div class="pc-arrow"><svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
+        </div>
+      </div>
+
+      <!-- Row 4 -->
+      <div class="product-card fade-up" data-vozila="1" data-oblika="meri">
+        <img src="images/kategorije/nadstresek_serije_vrs_1.jpg" alt="Nadstrešek serije VRS - 1 vozilo">
+        <div class="pc-overlay"></div>
+        <div class="pc-info">
+          <div class="pc-name">Nadstrešek serije VRS - 1 vozilo</div>
+          <div class="pc-arrow"><svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
+        </div>
+      </div>
+      <div class="product-card fade-up d1" data-vozila="3" data-oblika="stebri">
+        <img src="images/kategorije/nadstresek_serije_vrs_lc_2.jpg" alt="Nadstrešek serije VRS - LC za 2 ali več">
+        <div class="pc-overlay"></div>
+        <div class="pc-info">
+          <div class="pc-name">Nadstrešek serije VRS - LC za 2 ali več</div>
+          <div class="pc-arrow"><svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
+        </div>
+      </div>
+      <div class="product-card fade-up d2" data-vozila="3" data-oblika="meri">
+        <img src="images/kategorije/nadstresek_serije_vrs-mc-2.jpg" alt="Nadstrešek serije VRS - MC/HC za 2 ali več">
+        <div class="pc-overlay"></div>
+        <div class="pc-info">
+          <div class="pc-name">Nadstrešek serije VRS - MC/HC za 2 ali več</div>
+          <div class="pc-arrow"><svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
+        </div>
+      </div>
+
+      <!-- No results -->
+      <div class="no-results" id="noResults">
+        <div class="nr-icon">🔍</div>
+        <div class="nr-title">Ni rezultatov</div>
+        <p class="nr-sub">Za izbrane filtre ni ustreznih izdelkov.<br>Poskusite z drugačno kombinacijo.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── PROCESS ── -->
+<section class="proces">
+    <div class="sw">
+        <div class="fu"><div class="sl2">Kako delamo</div><div class="st2">Pot do <em>vaše rešitve</em></div></div>
+        <div class="proces-body">
+            <div class="fu d1">
+                <p class="proces-lead">Pri nas ste v dobrih rokah — od prve ideje do končnega rezultata. Brez presenečenj, samo kakovost.</p>
+                <a href="#" class="btn-brand-white">Začnite zdaj →</a>
+            </div>
+            <div class="steps fu d2">
+                <div class="step"><div class="step-n">01</div><div><div class="step-title">Povpraševanje</div><div class="step-desc">Pošljite obrazec ali pokličite. Odgovorimo v 24 urah.</div></div></div>
+                <div class="step"><div class="step-n">02</div><div><div class="step-title">Posvet in ogled</div><div class="step-desc">Skupaj pregledamo možnosti in oblikujemo rešitev po meri.</div></div></div>
+                <div class="step"><div class="step-n">03</div><div><div class="step-title">Izdelava</div><div class="step-desc">Natančna izdelava v lastni delavnici po vaših merah.</div></div></div>
+                <div class="step"><div class="step-n">04</div><div><div class="step-title">Montaža</div><div class="step-desc">Hitra, čista montaža z garancijo na celotno delo.</div></div></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ── REFERENCE ── -->
+<section class="reference">
+  <div class="reference-inner">
+    <div class="sec-head fade-up" style="margin-bottom:48px">
+      <div class="sec-title">Referenčni <em>projekti</em></div>
+    </div>
+
+    <div class="ref-grid fade-up d1">
+      <div class="ref-card">
+        <div class="ref-img"><img src="images/referenca.jpg" alt=""></div>
+        <div class="ref-info">
+          <div class="ref-name">Nadstrešek serije MYPORT za dve vozili</div>
+          <div class="ref-loc">Ljubljana</div>
+        </div>
+      </div>
+      <div class="ref-card">
+        <div class="ref-img"><img src="images/referenca.jpg" alt=""></div>
+        <div class="ref-info">
+          <div class="ref-name">Nadstrešek serije MYPORT+ za dve vozili</div>
+          <div class="ref-loc">Maribor</div>
+        </div>
+      </div>
+      <div class="ref-card">
+        <div class="ref-img"><img src="images/referenca.jpg" alt=""></div>
+        <div class="ref-info">
+          <div class="ref-name">Aluminijev nadstrešek JM za 1 vozilo</div>
+          <div class="ref-loc">Kranj</div>
+        </div>
+      </div>
+      <div class="ref-card">
+        <div class="ref-img"><img src="images/referenca.jpg" alt=""></div>
+        <div class="ref-info">
+          <div class="ref-name">Nadstrešek serije MYPORT</div>
+          <div class="ref-loc">Koper</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ref-cta fade-up d2">
+      <a href="#" class="btn-outline">
+        Oglejte si vse reference
+        <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer>
+    <div class="footer-grid">
+        <div>
+            <img class="footer-logo" src="images/White logo - no background(1).png" alt="LUROS">
+            <p class="footer-tagline">Premium rešitve za zunanjost vašega doma. Kakovost, ki jo čutite.</p>
+        </div>
+        <div class="footer-col"><h5>Hitre povezave</h5><ul><li><a href="#">Ponudba</a></li><li><a href="#">Reference</a></li><li><a href="#">O nas</a></li><li><a href="#">Kontakt</a></li></ul></div>
+        <div class="footer-col"><h5>Naši izdelki</h5><ul><li><a href="#">Nadstreški</a></li><li><a href="#">Pergole</a></li><li><a href="#">Screeni</a></li><li><a href="#">Tende</a></li></ul></div>
+        <div class="footer-col"><h5>Kontakt</h5><ul><li><a href="#">info@lurus.si</a></li><li><a href="#">+386 31 400 340</a></li><li><a href="#">Ljubljana, SI</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 LUROS. Vse pravice pridržane.</span><span>Zasebnost · Pogoji</span></div>
+</footer>
+
+<script>
+    // Menu
+    function openMenu(e){
+      if(e)e.preventDefault();
+      document.getElementById('menu-overlay').classList.add('open');
+      document.body.style.overflow='hidden';
+    }
+    function closeMenu(){
+      document.getElementById('menu-overlay').classList.remove('open');
+      document.body.style.overflow='';
+    }
+    document.addEventListener('keydown',e=>{if(e.key==='Escape')closeMenu()});
+
+    // Scroll animations
+    const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('vis')})},{threshold:.12});
+    document.querySelectorAll('.fu').forEach(el=>obs.observe(el));
+    document.querySelectorAll('.fade-up').forEach(el=>obs.observe(el));
+
+    // ── FILTER LOGIC ──
+    const LABELS = {
+      vozila: { '1':'1 vozilo', '2':'2 vozili', '3':'3+ vozil' },
+      oblika: { konzolni:'Konzolni', stebri:'Na 4 stebrih', meri:'Po meri' }
+    };
+
+    function getActiveFilters() {
+      const vozila = document.querySelector('[data-group="vozila"].selected')?.dataset.val || null;
+      const oblika = [...document.querySelectorAll('[data-group="oblika"].selected')].map(e => e.dataset.val);
+      return { vozila, oblika };
+    }
+
+    function runFilter() {
+      const { vozila, oblika } = getActiveFilters();
+      const cards = document.querySelectorAll('.product-card[data-vozila]');
+      let visible = 0;
+      cards.forEach(card => {
+        const matchV = !vozila || card.dataset.vozila === vozila;
+        const matchO = oblika.length === 0 || oblika.includes(card.dataset.oblika);
+        const show = matchV && matchO;
+        card.classList.toggle('hidden', !show);
+        if (show) visible++;
+      });
+      document.getElementById('resultCount').textContent = visible;
+      document.getElementById('noResults').classList.toggle('show', visible === 0);
+      renderTags(vozila, oblika);
+    }
+
+    function renderTags(vozila, oblika) {
+      const wrap = document.getElementById('filterTags');
+      wrap.innerHTML = '';
+      if (vozila) {
+        wrap.innerHTML += `<span class="ftag">${LABELS.vozila[vozila]}<span class="material-icons" onclick="resetGroup('vozila')">close</span></span>`;
+      }
+      oblika.forEach(v => {
+        wrap.innerHTML += `<span class="ftag">${LABELS.oblika[v]}<span class="material-icons" onclick="removeOblika('${v}')">close</span></span>`;
+      });
+    }
+
+    function removeOblika(val) {
+      const el = document.querySelector(`[data-group="oblika"][data-val="${val}"]`);
+      if (el) { el.classList.remove('selected'); runFilter(); }
+    }
+
+    function selectFo(el, group) {
+      document.querySelectorAll(`[data-group="${group}"]`).forEach(f => f.classList.remove('selected'));
+      el.classList.add('selected');
+      runFilter();
+    }
+
+    function toggleFo(el) {
+      el.classList.toggle('selected');
+      runFilter();
+    }
+
+    function resetGroup(group) {
+      document.querySelectorAll(`[data-group="${group}"]`).forEach(f => f.classList.remove('selected'));
+      runFilter();
+    }
+
+    function resetAll() {
+      document.querySelectorAll('.fo.selected').forEach(f => f.classList.remove('selected'));
+      runFilter();
+    }
+
+    runFilter();
+</script>
+</body>
+</html>

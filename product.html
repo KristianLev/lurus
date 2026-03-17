@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nadstrešek serije LJW — LUROS</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,700;1,9..144,300;1,9..144,700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="category.css">
+<link rel="stylesheet" href="product.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+    <a href="index.html"><img class="logo-img" src="images/logo.png" alt="LUROS"></a>
+    <div style="display: flex; gap: 20px; align-items: center;">
+        <ul class="nav-links">
+            <li><a href="#" class="act" onclick="openMenu(event)">Ponudba</a></li>
+            <li><a href="#">Reference</a></li>
+            <li><a href="#">O nas</a></li>
+            <li><a href="#">Kontakt</a></li>
+        </ul>
+        <a href="#" class="nav-cta">Brezplačna ponudba</a>
+    </div>
+</nav>
+
+<!-- FULLSCREEN MENU OVERLAY -->
+<div id="menu-overlay">
+  <button class="mo-close" onclick="closeMenu()">
+    <svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
+
+  <div class="mo-left">
+    <div class="mo-heading">Naša ponudba</div>
+    <div class="mo-grid">
+
+      <div class="mo-cat" onclick="window.location='category.html'">
+        <div class="mo-cat-img"><img src="images/avtomobilski_nadstresek.jpg" alt="Avtomobilski nadstreški"></div>
+        <div class="mo-cat-body">
+          <div class="mo-cat-title">Avtomobilski nadstreški</div>
+          <ul class="mo-cat-items">
+            <li>Nadstrešek serije LJW</li>
+            <li>Nadstrešek serije JM</li>
+            <li>Nadstrešek serije JT</li>
+            <li>Serije VD in VDS</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mo-cat" onclick="closeMenu()">
+        <div class="mo-cat-img"><img src="images/nadstreski_trasa.png" alt="Nadstreški za teraso"></div>
+        <div class="mo-cat-body">
+          <div class="mo-cat-title">Nadstreški za teraso</div>
+          <ul class="mo-cat-items">
+            <li>Nadstrešek za teraso 1</li>
+            <li>Nadstrešek za teraso 2</li>
+            <li>Nadstrešek za teraso 3</li>
+            <li>Nadstrešek za teraso 4–5</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mo-cat" onclick="closeMenu()">
+        <div class="mo-cat-img"><img src="images/pergola_lamele.jpg" alt="Pergole z vrtljivimi lamelami"></div>
+        <div class="mo-cat-body">
+          <div class="mo-cat-title">Pergole z lamelami</div>
+          <ul class="mo-cat-items">
+            <li>Pergola 1</li>
+            <li>Pergola 2</li>
+            <li>Pergola 3</li>
+            <li>Pergola 4 &amp; 5</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mo-cat" onclick="closeMenu()">
+        <div class="mo-cat-img"><img src="images/pergotende.jpg" alt="Pergotende in tende"></div>
+        <div class="mo-cat-body">
+          <div class="mo-cat-title">Pergotende in tende</div>
+          <ul class="mo-cat-items">
+            <li>Pergotenda 1</li>
+            <li>Pergotenda 2</li>
+            <li>Pergotenda 3</li>
+            <li>Tende 4 &amp; 5</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mo-cat" onclick="closeMenu()">
+        <div class="mo-cat-img"><img src="images/horizontalni_screeni.jpg" alt="Horizontalni screeni"></div>
+        <div class="mo-cat-body">
+          <div class="mo-cat-title">Horizontalni screeni</div>
+          <ul class="mo-cat-items">
+            <li>Horizontalni screen 1</li>
+            <li>Horizontalni screen 2</li>
+            <li>Horizontalni screen 3</li>
+            <li>Screen 4 &amp; 5</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mo-cat" onclick="closeMenu()">
+        <div class="mo-cat-img"><img src="images/screeni_zip.jpg" alt="Screeni, zip screeni"></div>
+        <div class="mo-cat-body">
+          <div class="mo-cat-title">Screeni, zip screeni</div>
+          <ul class="mo-cat-items">
+            <li>ZIP screen 1</li>
+            <li>ZIP screen 2</li>
+            <li>ZIP screen 3</li>
+            <li>ZIP screen 4 &amp; 5</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="mo-right">
+    <div>
+      <ul class="mo-nav-links">
+        <li><a href="#" onclick="closeMenu()">Reference</a></li>
+        <li><a href="#" onclick="closeMenu()">O nas</a></li>
+        <li><a href="#" onclick="closeMenu()">Kontakt</a></li>
+      </ul>
+    </div>
+    <div class="mo-brand">
+      <p class="mo-brand-desc">Premium nadstreški, pergole in sistemi za senčenje. Kakovostne rešitve po meri za vaš zunanji prostor.</p>
+      <div class="mo-brand-meta">
+        <div><strong>Pon–Čet</strong> · 7.00–17.00</div>
+        <div><strong>Petek</strong> · 7.00–15.00</div>
+        <div><strong>Sob</strong> · 8.00–12.00</div>
+      </div>
+      <div class="mo-brand-meta" style="margin-top:12px">
+        <div><strong>Tel</strong> · +386 31 400 340</div>
+        <div><strong>Mail</strong> · info@lurus.si</div>
+      </div>
+      <a href="#" class="mo-cta" onclick="closeMenu()">Brezplačna ponudba →</a>
+    </div>
+  </div>
+</div>
+
+
+<!-- ── PRODUCT HERO ── -->
+<!-- ── HERO ── -->
+<section class="cat-hero">
+  <div class="hero-grid">
+    <div class="fade-up">
+      <div class="hero-label">Avtomobilski nadstrešek</div>
+      <h1>Nadstrešek<br>serije <em>LJW</em></h1>
+      <p class="cat-hero-sub">Konstrukcija je sestavljena iz aluminijastih profilov ter trdne polikarbonaste kritine. Okvir nadstrešeka je del konstrukcije in ni posebej navarjen.</p>
+      <p class="cat-hero-sub2">Nadstrešek je primeren za 1 vozilo, prilagodljiv po meri ter odporjen na vse vremenske razmere skozi celotno leto.</p>
+      <a href="#" class="btn-accent" style="max-width:200px;">
+        <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        Povpraševanje
+      </a>
+    </div>
+    <div class="fade-up d1">
+      <div class="hero-img-wrap">
+        <img src="images/kategorije/nadstresek_serij_ljw.jpg" alt="Nadstrešek serije LJW">
+        <div class="hero-img-chip">
+          <div class="chip-n">LJW</div>
+          <div class="chip-l">3 leta garancije</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── ZAKAJ MI ── -->
+<section class="why">
+  <div class="why-inner">
+
+    <div class="left-col">
+
+      <div class="content-block fade-up">
+        <div class="cb-img">
+          <img src="images/kategorije/nadstresek_serije_VD_1.jpg" alt="Aluminijasta konstrukcija">
+          <div class="cb-img-overlay"></div>
+        </div>
+        <div class="cb-text">
+          <div class="cb-tag">Materiali</div>
+          <div class="cb-title">V celoti aluminijasta konstrukcija</div>
+          <p class="cb-body">Aluminijasta osnova zagotavlja popolno stabilnost, ker aluminij ne zardeva in je izjemno odporen proti koroziji. Vsak profil je točno prilagojen merim vašega parkirnega mesta.</p>
+        </div>
+      </div>
+
+      <div class="content-block reverse fade-up d1">
+        <div class="cb-text">
+          <div class="cb-tag">Estetika</div>
+          <div class="cb-title">Diskretna barvna paleta</div>
+          <p class="cb-body">Estetika je pri nas enako pomembna kot funkcionalnost. Zato so vsi nadstreški na voljo v široki paleti RAL barv, ki se brezhibno ujamejo z barvo fasade ali okvirjev.</p>
+        </div>
+        <div class="mid-card">
+          <img src="images/kategorije/nadstresek_serije_VD_LC_2.jpg" alt="Barvna paleta">
+          <div class="mid-card-overlay"></div>
+          <div class="mid-card-badge">RAL barve</div>
+        </div>
+      </div>
+
+      <div class="content-block fade-up d2">
+        <div class="cb-img">
+          <img src="images/kategorije/nadstresek_serije_vd_mc_2.jpg" alt="Montaža brez varjenja">
+          <div class="cb-img-overlay"></div>
+        </div>
+        <div class="cb-text">
+          <div class="cb-tag">Montaža</div>
+          <div class="cb-title">Brez varjenja</div>
+          <p class="cb-body">Vijačena montaža brez varjenja zagotavlja čiste spoje in dolgoletno odpornost. Vsi spoji so zavarovani pred vdorom vlage in se ne raztezajo pri temperaturnih razlikah.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="why-right fade-up d1">
+      <div class="why-eyebrow">Ključna prednost</div>
+      <div class="why-title">Polna polikarbonatna kritina —<br><em>100% UV zaščita</em></div>
+      <p class="why-body">Polna polikarbonatna plošča učinkovito blokira UV žarke, zato se prostor pod nadstreškom ne pregreva. Poleg tega 80% loči svetlobo, vozila ali tudi predmetov pod njo osvetljuje z naravnim svetlom, hkrati pa prepušča prijazno svetlobo.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ── TECHNICAL SPECS ── -->
+<section class="specs">
+  <div class="specs-inner">
+    <div class="specs-head fade-up">
+      <div class="specs-eyebrow">Specifikacije</div>
+      <div class="specs-title">Tehnični <em>podatki</em></div>
+    </div>
+
+    <div class="specs-grid fade-up d1">
+
+      <!-- Zaščita -->
+      <div class="spec-group">
+        <div class="sg-head">
+          <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <h4>Zaščita</h4>
+        </div>
+        <div class="sg-body">
+          <div class="spec-row">
+            <span class="spec-key">Obremenitev snega</span>
+            <span class="spec-val">150 kg/m² – 400 kg/m²</span>
+          </div>
+          <div class="spec-row">
+            <span class="spec-key">Dimenzijska stabilnost</span>
+            <span class="spec-val">–40°C do +120°C</span>
+          </div>
+          <div class="spec-row">
+            <span class="spec-key">UV zaščita</span>
+            <span class="spec-val">100%</span>
+          </div>
+          <div class="spec-row">
+            <span class="spec-key">Vodoodpornost</span>
+            <span class="spec-val">IP 54</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Velikost -->
+      <div class="spec-group">
+        <div class="sg-head">
+          <svg viewBox="0 0 24 24"><path d="M21 21H3"/><path d="M21 3v18"/><path d="M3 3h18"/><path d="M3 21V3"/></svg>
+          <h4>Velikost</h4>
+        </div>
+        <div class="sg-body">
+          <div class="spec-row" style="grid-template-columns:auto 1fr 1fr 60px;gap:6px;font-size:11px;background:var(--off);padding:10px 20px;">
+            <span class="spec-key" style="font-weight:600">Tip</span>
+            <span class="spec-key" style="text-align:center;font-weight:600">Širina</span>
+            <span class="spec-key" style="text-align:center;font-weight:600">Globina</span>
+            <span class="spec-key" style="text-align:right;font-weight:600">Vozil</span>
+          </div>
+          <div class="spec-row" style="grid-template-columns:auto 1fr 1fr 60px;gap:6px;font-size:11px">
+            <span class="spec-key">Serija 1</span>
+            <span class="spec-val" style="text-align:center">340 cm – 460 cm</span>
+            <span class="spec-val" style="text-align:center">480 cm – 600 cm</span>
+            <span class="spec-val">1</span>
+          </div>
+          <div class="spec-row" style="grid-template-columns:auto 1fr 1fr 60px;gap:6px;font-size:11px">
+            <span class="spec-key">Serija 2</span>
+            <span class="spec-val" style="text-align:center">600 cm – 700 cm</span>
+            <span class="spec-val" style="text-align:center">480 cm – 600 cm</span>
+            <span class="spec-val">2+</span>
+          </div>
+          <div class="spec-row">
+            <span class="spec-key">Material okvirja</span>
+            <span class="spec-val">Aluminij</span>
+          </div>
+          <div class="spec-row">
+            <span class="spec-key">Kritina</span>
+            <span class="spec-val">Polikarbonat 16 mm</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Montaža -->
+      <div class="spec-group">
+        <div class="sg-head">
+          <svg viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+          <h4>Montaža</h4>
+        </div>
+        <div class="sg-body">
+          <div class="spec-row">
+            <span class="spec-key">Pritrditev</span>
+            <span class="spec-val">Vijačena</span>
+          </div>
+          <div class="spec-row">
+            <span class="spec-key">Stebri</span>
+            <span class="spec-val">Aluminij Ø 80 mm</span>
+          </div>
+          <div class="spec-row">
+            <span class="spec-key">Montažni čas</span>
+            <span class="spec-val">1 delovni dan</span>
+          </div>
+          <div class="spec-row">
+            <span class="spec-key">Garancija</span>
+            <span class="spec-val">3 leta</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Barve — full width -->
+      <div class="spec-group wide fade-up d2">
+        <div class="sg-head">
+          <svg viewBox="0 0 24 24"><circle cx="13.5" cy="6.5" r=".5"/><circle cx="17.5" cy="10.5" r=".5"/><circle cx="8.5" cy="7.5" r=".5"/><circle cx="6.5" cy="12.5" r=".5"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"/></svg>
+          <h4>Barva</h4>
+        </div>
+        <div class="sg-body">
+          <div class="colors-row">
+            <div class="color-item">
+              <div class="color-swatch" style="background:#e8e0d5;border-color:#ccc"></div>
+              <div><div class="color-name">Bela</div><div class="color-note">RAL 9010</div></div>
+            </div>
+            <div class="color-item">
+              <div class="color-swatch" style="background:#b5b5b5"></div>
+              <div><div class="color-name">Urban Grey</div><div class="color-note">RAL 7040</div></div>
+            </div>
+            <div class="color-item">
+              <div class="color-swatch" style="background:#6e6e6e"></div>
+              <div><div class="color-name">Dark Silv.</div><div class="color-note">RAL 7016</div></div>
+            </div>
+            <div class="color-item">
+              <div class="color-swatch" style="background:#2e2e2e"></div>
+              <div><div class="color-name">Antracit</div><div class="color-note">RAL 7021</div></div>
+            </div>
+            <div class="color-item" style="border:none">
+              <div class="color-swatch" style="background:linear-gradient(135deg,#e8e0d5 25%,#b5b5b5 25%,#b5b5b5 50%,#6e6e6e 50%,#6e6e6e 75%,#2e2e2e 75%);border-color:#ccc"></div>
+              <div><div class="color-name">Po naročilu</div><div class="color-note">Vse RAL barve</div></div>
+            </div>
+          </div>
+          <p style="font-size:11px;color:var(--stone);padding:12px 20px;border-top:1px solid var(--border)">Najpogostejše barve so LA, Urban grey.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <p class="specs-note fade-up">Mere in tehnični podatki so informativni. Točne mere se določijo ob ogledu in posvetu.</p>
+    <div class="specs-cta fade-up d1">
+      <a href="#" class="btn-accent">
+        <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        Pošlji povpraševanje
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ── GALLERY ── -->
+<section class="gallery">
+  <div class="gallery-inner">
+    <div class="gallery-head fade-up">
+      <div class="sec-eyebrow">Fotogalerija</div>
+      <div class="sec-title"><em>Galerija</em></div>
+    </div>
+
+    <div class="gallery-grid fade-up d1">
+      <div class="gal-item" onclick="openLB(0)">
+        <img src="images/kategorije/nadstresek_serij_ljw.jpg" alt="">
+        <div class="gal-zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div>
+      </div>
+      <div class="gal-item" onclick="openLB(1)">
+        <img src="images/kategorije/nadstresek_serije_jm.jpg" alt="">
+        <div class="gal-zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div>
+      </div>
+      <div class="gal-item" onclick="openLB(2)">
+        <img src="images/kategorije/nadstresek_serije_jt.jpg" alt="">
+        <div class="gal-zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div>
+      </div>
+      <div class="gal-item" onclick="openLB(3)">
+        <img src="images/kategorije/nadstresek_serije_pjr_1_vozilo.jpg" alt="">
+        <div class="gal-zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div>
+      </div>
+      <div class="gal-item" onclick="openLB(4)">
+        <img src="images/kategorije/nadstresek_serije_pjr_2ali_vec.jpg" alt="">
+        <div class="gal-zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div>
+      </div>
+      <div class="gal-item" onclick="openLB(5)">
+        <img src="images/kategorije/nadstresek_serije_VD_1.jpg" alt="">
+        <div class="gal-zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox">
+  <button class="lb-close" onclick="closeLB()"><svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+  <button class="lb-nav lb-prev" onclick="navLB(-1)"><svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg></button>
+  <img class="lb-img" id="lbImg" src="" alt="">
+  <button class="lb-nav lb-next" onclick="navLB(1)"><svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></button>
+</div>
+
+<!-- ── RELATED PRODUCTS ── -->
+<section class="related">
+  <div class="related-inner">
+    <div class="related-head fade-up">
+      <div class="sec-eyebrow">Odkrijte še</div>
+      <div class="sec-title">Sorodni <em>izdelki</em></div>
+      <p class="sec-sub">Naj se vaš dom ne začne šele za vrati.<br>Začnite ga graditi z dovršenim nadstreškom.</p>
+    </div>
+    <div class="related-grid fade-up d1">
+      <div class="rel-card">
+        <div class="rel-img">
+          <img src="images/kategorije/nadstresek_serij_ljw.jpg" alt="LJW">
+          <div class="rel-overlay"></div>
+          <div class="rel-name-ov">Nadstrešek serije LJW</div>
+        </div>
+        <div class="rel-info">
+          <p class="rel-desc">Elegantna aluminijasta konstrukcija z UV-zaščitno polikarbonatno kritino za 1 vozilo.</p>
+          <a href="#" class="rel-link">Ogled izdelka <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+        </div>
+      </div>
+      <div class="rel-card">
+        <div class="rel-img">
+          <img src="images/kategorije/nadstresek_serije_jm.jpg" alt="JM">
+          <div class="rel-overlay"></div>
+          <div class="rel-name-ov">Nadstrešek serije JM</div>
+        </div>
+        <div class="rel-info">
+          <p class="rel-desc">Robustna serija z ojačano konstrukcijo, primerna za težje snežne obremenitve.</p>
+          <a href="#" class="rel-link">Ogled izdelka <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+        </div>
+      </div>
+      <div class="rel-card">
+        <div class="rel-img">
+          <img src="images/kategorije/nadstresek_serije_jt.jpg" alt="JT">
+          <div class="rel-overlay"></div>
+          <div class="rel-name-ov">Nadstrešek serije JT</div>
+        </div>
+        <div class="rel-info">
+          <p class="rel-desc">Sodoben dizajn z ravno linijo strehe — idealen za modernejše arhitekturne sloge.</p>
+          <a href="#" class="rel-link">Ogled izdelka <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FAQ ── -->
+<section class="faq-section">
+  <div class="faq-inner">
+    <div class="faq-left fade-up">
+      <div class="faq-eyebrow">Imate vprašanja</div>
+      <div class="faq-title">Vas zanima več o avtomobilskih nadstreških?</div>
+      <p class="faq-sub">Preberite ključna vprašanja, ki smo jih pripravili samo za vas.</p>
+      <a href="#" class="btn-accent-sm">
+        <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        Pošlji povpraševanje
+      </a>
+    </div>
+
+    <div class="faq-right fade-up d1">
+      <div class="faq-featured">
+        <div class="faq-featured-q">Kaj je polikarbonata kritina?</div>
+        <p class="faq-featured-a">Polna polikarbonatna plošča učinkovito blokira UV žarke in in-frardeče sevanje, zato se prostor pod nadstreškom ne pregreva. Poleg tega 80% loči svetlobo, vozila ali tudi predmetov pod njo osvetljuje z naravnim svetlom samovzamcem. Hkrati pa prepušča prijazno svetlobo.</p>
+      </div>
+
+      <div class="faq-list">
+        <div class="faq-item" onclick="toggleFaq(this)">
+          <div class="faq-q">
+            Kaj je polikarbonata kritina?
+            <div class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+          </div>
+          <div class="faq-a">Polikarbonat je sodobni plastični material z izjemnimi mehanskimi lastnostmi — lahek, trden in odporen na udarce. Naši nadstreški uporabljajo večslojni polikarbonat debeline 16 mm za optimalno zaščito.</div>
+        </div>
+        <div class="faq-item" onclick="toggleFaq(this)">
+          <div class="faq-q">
+            Lorem ipsum dolor sit amet?
+            <div class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+          </div>
+          <div class="faq-a">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</div>
+        </div>
+        <div class="faq-item" onclick="toggleFaq(this)">
+          <div class="faq-q">
+            Lorem ipsum dolor sit amet dolor sit?
+            <div class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+          </div>
+          <div class="faq-a">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── REFERENCE ── -->
+<section class="prod-reference">
+  <div class="reference-inner">
+    <div class="sec-head fade-up" style="margin-bottom:48px">
+      <div class="sec-title">Referenčni <em>projekti</em></div>
+    </div>
+    <div class="ref-grid fade-up d1">
+      <div class="ref-card">
+        <div class="ref-img"><img src="images/referenca.jpg" alt=""></div>
+        <div class="ref-info">
+          <div class="ref-name">Nadstrešek serije MYPORT za dve vozili</div>
+          <div class="ref-loc">Ljubljana</div>
+        </div>
+      </div>
+      <div class="ref-card">
+        <div class="ref-img"><img src="images/referenca.jpg" alt=""></div>
+        <div class="ref-info">
+          <div class="ref-name">Nadstrešek serije MYPORT+ za dve vozili</div>
+          <div class="ref-loc">Maribor</div>
+        </div>
+      </div>
+      <div class="ref-card">
+        <div class="ref-img"><img src="images/referenca.jpg" alt=""></div>
+        <div class="ref-info">
+          <div class="ref-name">Aluminijev nadstrešek JM za 1 vozilo</div>
+          <div class="ref-loc">Kranj</div>
+        </div>
+      </div>
+      <div class="ref-card">
+        <div class="ref-img"><img src="images/referenca.jpg" alt=""></div>
+        <div class="ref-info">
+          <div class="ref-name">Nadstrešek serije MYPORT</div>
+          <div class="ref-loc">Koper</div>
+        </div>
+      </div>
+    </div>
+    <div class="ref-cta fade-up d2">
+      <a href="#" class="btn-outline-acc">
+        Oglejte si vse reference
+        <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer>
+    <div class="footer-grid">
+        <div>
+            <img class="footer-logo" src="images/White logo - no background(1).png" alt="LUROS">
+            <p class="footer-tagline">Premium rešitve za zunanjost vašega doma. Kakovost, ki jo čutite.</p>
+        </div>
+        <div class="footer-col"><h5>Hitre povezave</h5><ul><li><a href="#">Ponudba</a></li><li><a href="#">Reference</a></li><li><a href="#">O nas</a></li><li><a href="#">Kontakt</a></li></ul></div>
+        <div class="footer-col"><h5>Naši izdelki</h5><ul><li><a href="#">Nadstreški</a></li><li><a href="#">Pergole</a></li><li><a href="#">Screeni</a></li><li><a href="#">Tende</a></li></ul></div>
+        <div class="footer-col"><h5>Kontakt</h5><ul><li><a href="#">info@lurus.si</a></li><li><a href="#">+386 31 400 340</a></li><li><a href="#">Ljubljana, SI</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><span>&copy; 2026 LUROS. Vse pravice pridržane.</span><span>Zasebnost · Pogoji</span></div>
+</footer>
+
+<script>
+    // Menu
+    function openMenu(e){
+      if(e)e.preventDefault();
+      document.getElementById('menu-overlay').classList.add('open');
+      document.body.style.overflow='hidden';
+    }
+    function closeMenu(){
+      document.getElementById('menu-overlay').classList.remove('open');
+      document.body.style.overflow='';
+    }
+    document.addEventListener('keydown',e=>{if(e.key==='Escape')closeMenu()});
+
+    // Scroll animations
+    const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('vis')})},{threshold:.08});
+    document.querySelectorAll('.fu').forEach(el=>obs.observe(el));
+    document.querySelectorAll('.fade-up').forEach(el=>obs.observe(el));
+
+    // Hero thumbnail swap
+    function swapImg(el, src) {
+      document.getElementById('mainImg').src = src;
+      document.querySelectorAll('.ph-thumb').forEach(t => t.classList.remove('active'));
+      el.classList.add('active');
+    }
+
+    // Lightbox
+    const lbImgs = [
+      'images/kategorije/nadstresek_serij_ljw.jpg',
+      'images/kategorije/nadstresek_serije_jm.jpg',
+      'images/kategorije/nadstresek_serije_jt.jpg',
+      'images/kategorije/nadstresek_serije_pjr_1_vozilo.jpg',
+      'images/kategorije/nadstresek_serije_pjr_2ali_vec.jpg',
+      'images/kategorije/nadstresek_serije_VD_1.jpg',
+    ];
+    let lbIdx = 0;
+    function openLB(i) {
+      lbIdx = i;
+      document.getElementById('lbImg').src = lbImgs[i];
+      document.getElementById('lightbox').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeLB() {
+      document.getElementById('lightbox').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+    function navLB(dir) {
+      lbIdx = (lbIdx + dir + lbImgs.length) % lbImgs.length;
+      document.getElementById('lbImg').src = lbImgs[lbIdx];
+    }
+    document.addEventListener('keydown', e => {
+      if(e.key === 'Escape') closeLB();
+      if(e.key === 'ArrowLeft') navLB(-1);
+      if(e.key === 'ArrowRight') navLB(1);
+    });
+    document.getElementById('lightbox').addEventListener('click', e => {
+      if(e.target === e.currentTarget) closeLB();
+    });
+
+    // FAQ accordion
+    function toggleFaq(item) {
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+      if(!isOpen) item.classList.add('open');
+    }
+</script>
+</body>
+</html>
