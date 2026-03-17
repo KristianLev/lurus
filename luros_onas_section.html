@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LUROS — O nas</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,700;1,9..144,300;1,9..144,700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --brand:#1f4963;
+  --brand-dark:#152f3d;
+  --brand-mid:#2a6285;
+  --brand-light:#e8f1f7;
+  --brand-pale:#f2f7fb;
+  --white:#ffffff;
+  --off:#f8fafc;
+  --text:#0e2333;
+  --muted:#5a7a8e;
+  --border:#cddde8;
+  --stone:#8aa5b5;
+}
+html{scroll-behavior:smooth}
+body{font-family:'Outfit',sans-serif;color:var(--text);background:var(--white);overflow-x:hidden}
+
+/* ── SECTION WRAPPER ── */
+.onas-section{
+  padding:100px 6%;
+  background:var(--white);
+}
+.onas-inner{
+  max-width:1100px;
+  margin:0 auto;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:80px;
+  align-items:start;
+}
+
+/* ── LEFT COLUMN ── */
+.left-col{display:flex;flex-direction:column;gap:52px}
+
+/* Each content block */
+.content-block{
+  display:grid;
+  grid-template-columns:220px 1fr;
+  gap:32px;
+  align-items:start;
+}
+.content-block.reverse{
+  grid-template-columns:1fr 220px;
+}
+.content-block.reverse .cb-img{order:2}
+.content-block.reverse .cb-text{order:1}
+
+/* photo */
+.cb-img{
+  position:relative;
+  border-radius:16px;
+  overflow:hidden;
+  aspect-ratio:3/3.2;
+  flex-shrink:0;
+}
+.cb-img img{
+  width:100%;height:100%;
+  object-fit:cover;
+  display:block;
+  transition:transform .6s ease;
+}
+.content-block:hover .cb-img img{transform:scale(1.04)}
+.cb-img-overlay{
+  position:absolute;inset:0;
+  border-radius:16px;
+  background:linear-gradient(160deg,rgba(31,73,99,.08) 0%,transparent 60%);
+  border:1px solid rgba(31,73,99,.1);
+}
+
+/* text */
+.cb-text{padding-top:6px}
+.cb-tag{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:10px;font-weight:600;color:var(--brand);
+  letter-spacing:2.5px;text-transform:uppercase;
+  margin-bottom:12px;
+}
+.cb-tag::before{
+  content:'';width:18px;height:2px;background:var(--brand);
+  border-radius:2px;
+}
+.cb-title{
+  font-family:'Fraunces',serif;
+  font-size:20px;font-weight:700;
+  color:var(--text);
+  line-height:1.2;
+  margin-bottom:12px;
+  letter-spacing:-.3px;
+}
+.cb-body{
+  font-size:13px;color:var(--muted);
+  line-height:1.8;font-weight:300;
+}
+
+/* middle image card */
+.mid-card{
+  grid-column:2;
+  border-radius:16px;
+  overflow:hidden;
+  position:relative;
+  aspect-ratio:4/3;
+  margin-top:-8px;
+}
+.mid-card img{
+  width:100%;height:100%;
+  object-fit:cover;display:block;
+  transition:transform .7s ease;
+}
+.mid-card:hover img{transform:scale(1.04)}
+.mid-card-overlay{
+  position:absolute;inset:0;
+  background:linear-gradient(to top,rgba(10,24,36,.5) 0%,transparent 55%);
+}
+.mid-card-badge{
+  position:absolute;bottom:16px;left:16px;
+  background:var(--brand);color:#fff;
+  font-size:10px;font-weight:600;
+  letter-spacing:1.5px;text-transform:uppercase;
+  padding:6px 12px;border-radius:100px;
+}
+
+/* ── RIGHT COLUMN ── */
+.right-col{
+  position:sticky;top:120px;
+  padding:52px 48px;
+  background:var(--brand-pale);
+  border:1px solid var(--border);
+  border-radius:20px;
+}
+.rc-eyebrow{
+  display:flex;align-items:center;gap:10px;
+  font-size:10px;font-weight:600;
+  color:var(--brand);letter-spacing:3px;
+  text-transform:uppercase;margin-bottom:20px;
+}
+.rc-eyebrow::before{content:'';width:18px;height:2px;background:var(--brand)}
+.rc-title{
+  font-family:'Fraunces',serif;
+  font-size:clamp(28px,2.8vw,40px);
+  font-weight:700;color:var(--text);
+  line-height:1.15;letter-spacing:-.5px;
+  margin-bottom:20px;
+}
+.rc-title em{font-style:italic;font-weight:300;color:var(--brand)}
+.rc-body{
+  font-size:15px;color:var(--muted);
+  line-height:1.85;font-weight:300;
+  margin-bottom:40px;
+}
+
+/* value list */
+.rc-values{display:flex;flex-direction:column;gap:0;margin-bottom:40px}
+.rv-item{
+  display:grid;grid-template-columns:36px 1fr;
+  gap:14px;align-items:start;
+  padding:18px 0;
+  border-bottom:1px solid var(--border);
+  transition:padding-left .2s;
+  cursor:default;
+}
+.rv-item:last-child{border:none}
+.rv-item:hover{padding-left:4px}
+.rv-icon{
+  width:36px;height:36px;
+  background:var(--white);
+  border:1.5px solid var(--border);
+  border-radius:9px;
+  display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;margin-top:1px;
+  transition:background .2s,border-color .2s;
+}
+.rv-item:hover .rv-icon{background:var(--brand);border-color:var(--brand)}
+.rv-icon svg{width:14px;height:14px;stroke:var(--brand);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;transition:stroke .2s}
+.rv-item:hover .rv-icon svg{stroke:#fff}
+.rv-title{font-size:13px;font-weight:600;color:var(--text);margin-bottom:4px}
+.rv-desc{font-size:12px;color:var(--muted);line-height:1.65}
+
+/* stats row */
+.rc-stats{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:1px;background:var(--border);
+  border-radius:10px;overflow:hidden;
+  margin-bottom:32px;
+}
+.rs-item{
+  background:var(--white);
+  padding:18px 16px;text-align:center;
+}
+.rs-num{
+  font-family:'Fraunces',serif;
+  font-size:28px;font-weight:700;
+  color:var(--brand);line-height:1;
+}
+.rs-num span{font-size:16px;opacity:.6}
+.rs-lbl{font-size:10px;color:var(--stone);margin-top:4px;text-transform:uppercase;letter-spacing:.8px}
+
+/* CTA */
+.rc-cta{
+  display:inline-flex;align-items:center;gap:10px;
+  background:var(--brand);color:#fff;
+  padding:14px 28px;border-radius:4px;
+  font-size:13px;font-weight:600;
+  text-decoration:none;
+  transition:all .2s;
+}
+.rc-cta:hover{background:var(--brand-mid);gap:14px}
+
+/* ── ANIMATE IN ── */
+.fade-up{opacity:0;transform:translateY(24px);transition:opacity .65s ease,transform .65s ease}
+.fade-up.vis{opacity:1;transform:none}
+.fade-up.d1{transition-delay:.1s}
+.fade-up.d2{transition-delay:.2s}
+.fade-up.d3{transition-delay:.3s}
+.fade-up.d4{transition-delay:.4s}
+</style>
+</head>
+<body>
+
+<section class="onas-section">
+  <div class="onas-inner">
+
+    <!-- LEFT: three content blocks -->
+    <div class="left-col">
+
+      <!-- Block 1: image left, text right -->
+      <div class="content-block fade-up">
+        <div class="cb-img">
+          <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=500&q=85" alt="Kakovost">
+          <div class="cb-img-overlay"></div>
+        </div>
+        <div class="cb-text">
+          <div class="cb-tag">Kakovost</div>
+          <div class="cb-title">Kjer udobje sreča kakovost</div>
+          <p class="cb-body">Naša zaveza kakovosti stoji v središču vsakega izdelka, ki ga ponujamo — od nadstreškov do senčil in zip screenov. Izdelki so zasnovani z mislijo na trajnost, estetiko in funkcionalnost ter zagotavljajo optimalno zaščito pred vremenskimi vplivi in udobje skozi vse leto.</p>
+        </div>
+      </div>
+
+      <!-- Block 2: text left, image right (middle pergola image) -->
+      <div class="content-block reverse fade-up d1">
+        <div class="cb-text">
+          <div class="cb-tag">Trajnostnost</div>
+          <div class="cb-title">Pametno in trajnostno</div>
+          <p class="cb-body">Zavedamo se pomembnosti trajnostne gradnje, zato uporabljamo kakovostne materiale, ki zagotavljajo dolgo življenjsko dobo brez nepotrebnega vzdrževanja. Naši sistemi senčenja in nadstreški zmanjšujejo potrebo po hlajenju prostorov in tako prispevajo k varovanju okolja.</p>
+        </div>
+        <div class="mid-card">
+          <img src="https://images.unsplash.com/photo-1598977123118-4e30ba3b5278?w=600&q=85" alt="Pergola">
+          <div class="mid-card-overlay"></div>
+          <div class="mid-card-badge">Pergole z lamelami</div>
+        </div>
+      </div>
+
+      <!-- Block 3: image left, text right -->
+      <div class="content-block fade-up d2">
+        <div class="cb-img">
+          <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=500&q=85" alt="Tehnologija">
+          <div class="cb-img-overlay"></div>
+        </div>
+        <div class="cb-text">
+          <div class="cb-tag">Inovacije</div>
+          <div class="cb-title">Tehnologija v službi udobja</div>
+          <p class="cb-body">Z nenehnim spremljanjem sodobnih trendov v arhitekturi in senčenju ustvarjamo rešitve, ki združujejo vrhunski dizajn in napredno tehnologijo. Naša tehnična ekipa je pripravljena na najzahtevnejše projekte — od pergol z lamelami do avtomatiziranih zip screen sistemov.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- RIGHT: sticky info card -->
+    <div class="right-col fade-up d3">
+      <div class="rc-eyebrow">Kdo smo</div>
+      <div class="rc-title">Vaša vizija,<br><em>naša izvedba</em></div>
+      <p class="rc-body">Vsak nadstrešek ali senčilo je edinstven, tako kot vaš dom. Zato vsakemu projektu pristopamo individualno, z največjo mero pozornosti, strokovnosti in prilagodljivosti. Od svetovanja do montaže — z vami smo na vsakem koraku.</p>
+
+      <div class="rc-values">
+        <div class="rv-item">
+          <div class="rv-icon">
+            <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <div>
+            <div class="rv-title">Vrhunska kakovost</div>
+            <div class="rv-desc">Preizkušeni materiali in precizna izdelava za rešitve, ki zdržijo desetletja.</div>
+          </div>
+        </div>
+        <div class="rv-item">
+          <div class="rv-icon">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/><path d="M4.93 4.93a10 10 0 0 0 0 14.14"/></svg>
+          </div>
+          <div>
+            <div class="rv-title">Individualni pristop</div>
+            <div class="rv-desc">Vsaka rešitev je prilagojena natančno vašim meram, željam in slogu doma.</div>
+          </div>
+        </div>
+        <div class="rv-item">
+          <div class="rv-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+          </div>
+          <div>
+            <div class="rv-title">Trajnostni pristop</div>
+            <div class="rv-desc">Energetsko učinkovite rešitve za manjšo porabo in večje udobje vse leto.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="rc-stats">
+        <div class="rs-item">
+          <div class="rs-num">500<span>+</span></div>
+          <div class="rs-lbl">Projektov</div>
+        </div>
+        <div class="rs-item">
+          <div class="rs-num">15<span>+</span></div>
+          <div class="rs-lbl">Let izkušenj</div>
+        </div>
+        <div class="rs-item">
+          <div class="rs-num">3<span>yr</span></div>
+          <div class="rs-lbl">Garancija</div>
+        </div>
+      </div>
+
+      <a href="#" class="rc-cta">Spoznajte nas →</a>
+    </div>
+
+  </div>
+</section>
+
+<script>
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('vis') });
+}, { threshold: 0.12 });
+document.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
+</script>
+</body>
+</html>
