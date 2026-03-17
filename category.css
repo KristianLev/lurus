@@ -416,3 +416,147 @@
 .fade-up.d2{transition-delay:.2s}
 .fade-up.d3{transition-delay:.3s}
 .fade-up.d4{transition-delay:.4s}
+
+/* ═══════════════════════════════════════════════
+   RESPONSIVE MEDIA QUERIES – category.css
+   ═══════════════════════════════════════════════ */
+
+/* ── TABLET: max-width 1024px ── */
+@media(max-width:1024px){
+  /* BREADCRUMB */
+  .breadcrumb{padding:12px 3%}
+
+  /* HERO */
+  .cat-hero{margin-top:58px}
+  .hero-grid > .fade-up:first-child{padding:48px 4% 56px}
+  .cat-hero h1{font-size:clamp(30px,4vw,46px)}
+
+  /* WHY */
+  .why{padding:60px 4%}
+  .why-inner{gap:28px}
+
+  /* PRODUCTS */
+  .products{padding:60px 4%}
+  .products-grid{grid-template-columns:repeat(2,1fr);gap:12px}
+
+  /* FILTER BAR */
+  .filter-bar{padding:22px 24px;gap:20px}
+  .filter-divider{display:none}
+
+  /* PROCESS */
+  .process{padding:60px 4%}
+  .steps-row{grid-template-columns:repeat(2,1fr)}
+
+  /* REFERENCE */
+  .reference{padding:60px 4%}
+  .ref-grid{grid-template-columns:repeat(2,1fr);gap:12px}
+}
+
+/* ── MOBILE: max-width 768px ── */
+@media(max-width:768px){
+  /* BREADCRUMB */
+  .breadcrumb{margin-top:58px;padding:10px 4%;font-size:11px;flex-wrap:wrap}
+
+  /* HERO */
+  .cat-hero{margin-top:58px}
+  .hero-grid{grid-template-columns:1fr}
+  .hero-grid > .fade-up:first-child{padding:36px 4% 40px;max-width:100%;margin-left:0}
+  .cat-hero h1{font-size:clamp(26px,6vw,36px)}
+  .cat-hero-sub,.cat-hero-sub2{max-width:100%;font-size:14px}
+  .hero-img-wrap{max-height:280px;width:100%}
+  .hero-img-chip{bottom:12px;left:12px;padding:8px 12px}
+  .chip-n{font-size:20px}
+
+  /* WHY */
+  .why{padding:40px 4%}
+  .why-inner{grid-template-columns:1fr;gap:0}
+  .why-inner::before{display:none}
+  .why-inner > :last-child{order:2;margin-top:32px}
+  .why-title{font-size:clamp(22px,5vw,30px)}
+  .feature-block{grid-template-columns:56px 1fr;gap:14px;padding:20px 0}
+  .fb-img{width:56px;height:56px}
+
+  /* FILTER BAR */
+  .filter-bar{grid-template-columns:1fr;padding:18px 16px;gap:18px;border-radius:12px}
+  .filter-divider{display:none}
+  .filter-options{flex-wrap:wrap;gap:8px}
+  .fo{min-width:76px;padding:10px 12px}
+  .fo-icon{width:36px;height:36px}
+  .fo-icon .material-icons{font-size:20px}
+  .fo-label{font-size:11px}
+  .filter-result-strip{flex-wrap:wrap}
+
+  /* PRODUCTS */
+  .products{padding:40px 4%}
+  .products-grid{grid-template-columns:1fr 1fr;gap:10px}
+  .product-card{aspect-ratio:3/2}
+  .pc-info{padding:14px 12px}
+  .pc-name{font-size:14px}
+  .sec-title{font-size:clamp(24px,5vw,34px)}
+  .sec-sub{font-size:13px;margin-bottom:32px}
+
+  /* PROCESS */
+  .process{padding:40px 4%}
+  .steps-row{grid-template-columns:1fr 1fr}
+  .step-card{padding:24px 18px}
+  .step-num{font-size:32px}
+
+  /* REFERENCE */
+  .reference{padding:40px 4%}
+  .ref-grid{grid-template-columns:1fr 1fr;gap:10px}
+  .ref-name{font-size:12px}
+  .ref-loc{font-size:10px}
+
+  /* BUTTONS full width */
+  .btn-accent,.btn-white-outline,.btn-outline{
+    width:100%;justify-content:center;text-align:center;
+  }
+
+  /* Images responsive */
+  img{max-width:100%;height:auto}
+}
+
+/* ── SMALL MOBILE: max-width 480px ── */
+@media(max-width:480px){
+  /* BREADCRUMB */
+  .breadcrumb{margin-top:52px;padding:8px 4%;font-size:10px}
+
+  /* HERO */
+  .cat-hero{margin-top:52px}
+  .cat-hero h1{font-size:24px}
+  .cat-hero-sub,.cat-hero-sub2{font-size:13px}
+  .hero-img-wrap{max-height:220px}
+  .hero-grid > .fade-up:first-child{padding:28px 4% 32px}
+
+  /* WHY */
+  .why{padding:32px 4%}
+  .feature-block{grid-template-columns:48px 1fr;gap:12px;padding:16px 0}
+  .fb-img{width:48px;height:48px;border-radius:8px}
+  .fb-title{font-size:13px}
+  .fb-desc{font-size:12px}
+  .why-title{font-size:22px}
+  .why-body{font-size:14px}
+
+  /* FILTER BAR */
+  .filter-bar{padding:14px 12px;border-radius:10px}
+  .filter-group-label{font-size:10px;margin-bottom:10px}
+  .fo{min-width:68px;padding:8px 8px;border-radius:8px}
+  .fo-icon{width:32px;height:32px;border-radius:8px}
+  .fo-icon .material-icons{font-size:18px}
+  .fo-label{font-size:10px}
+
+  /* PRODUCTS */
+  .products-grid{grid-template-columns:1fr;gap:10px}
+  .product-card{aspect-ratio:16/10}
+  .sec-title{font-size:22px}
+
+  /* PROCESS */
+  .steps-row{grid-template-columns:1fr}
+  .step-card{padding:20px 16px}
+  .step-num{font-size:28px;margin-bottom:10px}
+  .step-title{font-size:13px}
+  .step-desc{font-size:11px}
+
+  /* REFERENCE */
+  .ref-grid{grid-template-columns:1fr;gap:10px}
+}

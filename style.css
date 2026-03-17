@@ -316,3 +316,229 @@ footer{background:var(--brand-dark);padding:60px 5% 28px}
 .mo-brand-meta strong{color:rgba(255,255,255,.45);font-weight:500}
 .mo-cta{display:inline-flex;align-items:center;gap:8px;background:var(--cta);color:#fff;padding:13px 24px;border-radius:4px;font-size:16px;font-weight:500;text-decoration:none;transition:all .2s;margin-top:20px}
 .mo-cta:hover{background:var(--cta-hover);gap:12px}
+
+.nav-hamburger{
+  display:none;
+  flex-direction:column;gap:5px;
+  background:none;border:none;cursor:pointer;padding:8px;
+}
+.nav-hamburger span{
+  display:block;width:22px;height:2px;background:var(--brand);
+  transition:all .2s;
+}
+
+/* ═══════════════════════════════════════════════
+   RESPONSIVE MEDIA QUERIES
+   ═══════════════════════════════════════════════ */
+
+/* ── TABLET: max-width 1024px ── */
+@media(max-width:1024px){
+  /* NAV */
+  nav{padding:0 3%}
+  .nav-links{gap:18px}
+  .nav-cta{padding:9px 16px;font-size:14px}
+
+  /* HERO */
+  .hero-text{max-width:420px;left:4%}
+  .hero-text h1{font-size:clamp(28px,3.5vw,44px)}
+  .hero-text p{font-size:15px;max-width:340px}
+
+  /* STATS */
+  .stats-inner{grid-template-columns:repeat(2,1fr)}
+  .si{padding:22px 4%}
+  .si:nth-child(2){border-right:none}
+
+  /* USP */
+  .usp{padding:60px 4%}
+  .usp-grid{grid-template-columns:repeat(2,1fr)}
+
+  /* PONUDBA */
+  .ponudba{padding:60px 4%}
+  .pg{grid-template-columns:repeat(2,1fr)}
+
+  /* PROCES */
+  .proces{padding:60px 4%}
+  .proces-body{grid-template-columns:1fr 1.5fr;gap:48px}
+
+  /* REFERENCE */
+  .reference{padding:60px 4%}
+  .ref-grid{grid-template-columns:repeat(2,1fr)}
+
+  /* O NAS */
+  .onas-section{padding:60px 4%}
+  .onas-inner{gap:48px}
+  .content-block{grid-template-columns:180px 1fr;gap:24px}
+  .content-block.reverse{grid-template-columns:1fr 180px}
+  .right-col{padding:36px 32px}
+
+  /* FOOTER */
+  .footer-grid{grid-template-columns:1fr 1fr;gap:32px}
+
+  /* MENU OVERLAY */
+  #menu-overlay{grid-template-columns:1fr 280px}
+  .mo-grid{grid-template-columns:repeat(2,1fr);gap:14px}
+  .mo-left{padding:80px 4% 40px 4%}
+  .mo-right{padding:80px 24px 40px}
+}
+
+/* ── MOBILE: max-width 768px ── */
+@media(max-width:768px){
+  /* NAV */
+  nav{padding:0 4%;height:58px}
+  .logo-img{height:36px}
+  .nav-links{display:none}
+  .nav-hamburger{display:flex}
+  .nav-cta{padding:8px 14px;font-size:13px}
+
+  /* HERO */
+  .hero{margin-top:58px}
+  .hero-img{max-height:55vh}
+  .hero-text{position:relative;top:auto;left:auto;transform:none;padding:32px 4% 36px;max-width:100%;background:rgba(12,28,40,.75)}
+  .hero-text h1{font-size:clamp(26px,6vw,36px)}
+  .hero-text p{font-size:14px;max-width:100%}
+  .hero-btns{flex-direction:column}
+  .hero-btns a{width:100%;justify-content:center;text-align:center}
+
+  /* HOTSPOTS & POPUPS: hide on mobile */
+  .hs{display:none!important}
+  .popup{display:none!important}
+
+  /* STATS */
+  .stats-inner{grid-template-columns:1fr 1fr}
+  .si{padding:18px 4%}
+  .si-num{font-size:26px}
+  .si-lbl{font-size:11px}
+
+  /* USP */
+  .usp{padding:48px 4%}
+  .usp-grid{grid-template-columns:1fr;margin-top:32px}
+  .usp-item{padding:28px 20px}
+
+  /* PONUDBA */
+  .ponudba{padding:48px 4%}
+  .sec-head{flex-direction:column;align-items:flex-start;gap:16px}
+  .pg{grid-template-columns:1fr 1fr;grid-template-rows:auto}
+
+  /* PROCES */
+  .proces{padding:48px 4%}
+  .proces-body{grid-template-columns:1fr;gap:32px}
+
+  /* REFERENCE */
+  .reference{padding:48px 4%}
+  .ref-grid{grid-template-columns:1fr 1fr;gap:12px}
+
+  /* O NAS */
+  .onas-section{padding:48px 4%}
+  .onas-inner{grid-template-columns:1fr;gap:36px}
+  .content-block{grid-template-columns:1fr;gap:16px}
+  .content-block.reverse{grid-template-columns:1fr}
+  .content-block.reverse .cb-img{order:1}
+  .content-block.reverse .cb-text{order:2}
+  .cb-img{max-width:100%;aspect-ratio:16/10}
+  .right-col{position:static;padding:32px 24px;border-radius:14px}
+  .rc-stats{grid-template-columns:repeat(3,1fr)}
+  .rs-item{padding:14px 10px}
+  .rs-num{font-size:22px}
+
+  /* TICKER */
+  .ticker{height:40px}
+  .ti{padding:0 20px;font-size:12px}
+
+  /* FOOTER */
+  footer{padding:40px 4% 20px}
+  .footer-grid{grid-template-columns:1fr 1fr;gap:24px}
+  .footer-bottom{flex-direction:column;gap:8px;text-align:center;font-size:12px}
+
+  /* MENU OVERLAY */
+  #menu-overlay{grid-template-columns:1fr}
+  .mo-right{display:none}
+  .mo-left{padding:70px 4% 32px 4%}
+  .mo-grid{grid-template-columns:1fr 1fr;gap:10px}
+  .mo-close{top:12px;right:12px;width:40px;height:40px}
+  .mo-heading{font-size:12px;margin-bottom:24px}
+  .mo-cat-body{padding:12px 14px 14px}
+  .mo-cat-title{font-size:14px}
+  .mo-cat-items li{font-size:12px}
+
+  /* BUTTONS: full width on mobile */
+  .btn-white,.btn-ghost-w,.btn-brand-white,.btn-outline-brand,.nav-cta,.rc-cta,.mo-cta{
+    width:100%;justify-content:center;text-align:center;
+  }
+
+  /* GENERAL TYPOGRAPHY */
+  .st2{font-size:clamp(24px,5vw,34px)}
+  .sl2{font-size:11px;letter-spacing:2px}
+
+  /* fade animations: reduce transform on mobile */
+  .fade-up{transform:translateY(16px)}
+  .fu{transform:translateY(14px)}
+
+  /* Images responsive */
+  img{max-width:100%;height:auto}
+}
+
+/* ── SMALL MOBILE: max-width 480px ── */
+@media(max-width:480px){
+  /* NAV */
+  nav{height:52px}
+  .logo-img{height:30px}
+  .nav-cta{font-size:12px;padding:7px 12px}
+
+  /* HERO */
+  .hero{margin-top:52px}
+  .hero-img{max-height:45vh;min-height:200px}
+  .hero-text{padding:24px 4% 28px}
+  .hero-text h1{font-size:24px;letter-spacing:-.5px}
+  .hero-text p{font-size:13px;line-height:1.6;margin-bottom:20px}
+  .hero-eyebrow{margin-bottom:14px}
+  .ey-label{font-size:10px;letter-spacing:2px}
+
+  /* STATS */
+  .stats-inner{grid-template-columns:1fr 1fr}
+  .si{padding:14px 3%}
+  .si-num{font-size:22px}
+  .si-num span{font-size:14px}
+  .si-lbl{font-size:9px}
+
+  /* USP */
+  .usp-num{font-size:32px}
+  .usp-title{font-size:14px}
+  .usp-desc{font-size:13px}
+
+  /* PONUDBA */
+  .pg{grid-template-columns:1fr}
+  .pc{aspect-ratio:16/10}
+  .pc-name{font-size:16px}
+
+  /* PROCES */
+  .step{grid-template-columns:40px 1fr}
+  .step-title{font-size:16px}
+  .step-desc{font-size:13px}
+
+  /* REFERENCE */
+  .ref-grid{grid-template-columns:1fr}
+
+  /* O NAS */
+  .rc-stats{grid-template-columns:repeat(3,1fr);gap:1px}
+  .rs-item{padding:12px 8px}
+  .rs-num{font-size:20px}
+  .rs-lbl{font-size:8px}
+  .right-col{padding:24px 18px}
+  .cb-title{font-size:18px}
+  .cb-body{font-size:14px}
+
+  /* FOOTER */
+  .footer-grid{grid-template-columns:1fr;gap:20px}
+  .footer-tagline{max-width:100%}
+
+  /* MENU OVERLAY */
+  .mo-grid{grid-template-columns:1fr;gap:8px}
+  .mo-cat-img{aspect-ratio:16/9}
+
+  /* TYPOGRAPHY */
+  .st2{font-size:clamp(22px,5.5vw,28px)}
+
+  /* TICKER */
+  .ticker{height:34px}
+  .ti{font-size:10px;padding:0 14px}
+}
