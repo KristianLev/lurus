@@ -2,7 +2,7 @@
 *{margin:0;padding:0;box-sizing:border-box}
 :root{
     --brand:#0667a3;
-    --brand-dark:#152f3d;
+    --brand-dark:#08202d;
     --brand-mid:#2a6285;
     --brand-light:#e8f1f7;
     --brand-pale:#f2f7fb;
@@ -12,8 +12,8 @@
     --muted:#5a7a8e;
     --border:#cddde8;
     --stone:#8aa5b5;
-    --cta:#e8732a;
-    --cta-hover:#d4641f;
+    --cta:#e96410;
+    --cta-hover:#c35715;
 }
 html{scroll-behavior:smooth}
 body{font-family:'Outfit',sans-serif;color:var(--text);background:var(--white);overflow-x:hidden}
