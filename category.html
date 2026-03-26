@@ -149,10 +149,8 @@
 <section class="cat-hero">
   <div class="hero-grid">
     <div class="fade-up">
-      <div class="hero-label">Kategorija</div>
       <h1>Avtomobilski<br><em>nadstreški</em></h1>
       <p class="cat-hero-sub">Ne ponujamo le zaščite za vozilo, temveč estetsko dovršen arhitekturni element, ki se popolnoma ujame z vašim domom.</p>
-      <p class="cat-hero-sub2">Naši sistemi so odporni na vse vremenske razmere, prilagodljivi po meri in izdelani iz najkakovostnejših materialov.</p>
       <a href="#" class="btn-accent" style="max-width: 200px;">
         <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
         Povpraševanje
@@ -169,6 +167,192 @@
     </div>
   </div>
 </section>
+<!-- ── PRODUCTS ── -->
+<section class="products">
+    <div class="products-inner">
+        <div class="sec-head fu" style="margin-bottom:24px;">
+            <div><div class="st2">Naši <em>izdelki</em></div>
+                <small>Naj se vaš dom ne začne šele za vrati. Začnite ga graditi z dovršenim nadstreškom.</small></div>
+        </div>
+
+        <!-- ── FILTER BAR ── -->
+        <div class="filter-bar fade-up">
+            <div class="filter-divider"></div>
+
+            <!-- Group 1: Število vozil (radio) -->
+            <div>
+                <div class="filter-group-label">
+                    1. Število vozil
+                </div>
+                <div class="filter-options" id="grp-vozila">
+                    <div class="fo" data-group="vozila" data-val="1" onclick="selectFo(this,'vozila')">
+                        <div class="fo-radio"></div>
+                        <div class="fo-icon"><span class="material-icons">directions_car</span></div>
+                        <div class="fo-label">1 vozilo</div>
+                    </div>
+                    <div class="fo" data-group="vozila" data-val="2" onclick="selectFo(this,'vozila')">
+                        <div class="fo-radio"></div>
+                        <div class="fo-icon"><span class="material-icons">local_shipping</span></div>
+                        <div class="fo-label">2 vozili</div>
+                    </div>
+                    <div class="fo" data-group="vozila" data-val="3" onclick="selectFo(this,'vozila')">
+                        <div class="fo-radio"></div>
+                        <div class="fo-icon"><span class="material-icons">airport_shuttle</span></div>
+                        <div class="fo-label">3 ali več vozil</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Group 2: Oblika nadstreška (checkbox) -->
+            <div>
+                <div class="filter-group-label">
+                    2. Oblika nadstreška
+                </div>
+                <div class="filter-options" id="grp-oblika">
+                    <div class="fo" data-group="oblika" data-val="konzolni" onclick="toggleFo(this)">
+                        <div class="fo-check"></div>
+                        <div class="fo-icon"><span class="material-icons">roofing</span></div>
+                        <div class="fo-label">Konzolni</div>
+                    </div>
+                    <div class="fo" data-group="oblika" data-val="stebri" onclick="toggleFo(this)">
+                        <div class="fo-check"></div>
+                        <div class="fo-icon"><span class="material-icons">garage</span></div>
+                        <div class="fo-label">Na 4 stebrih</div>
+                    </div>
+                    <div class="fo" data-group="oblika" data-val="meri" onclick="toggleFo(this)">
+                        <div class="fo-check"></div>
+                        <div class="fo-icon"><span class="material-icons">design_services</span></div>
+                        <div class="fo-label">Po meri</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- result strip -->
+            <div class="filter-result-strip">
+                <span class="material-icons">filter_list</span>
+                Prikazujem <strong id="resultCount">12</strong> izdelkov
+                <div class="filter-tags" id="filterTags"></div>
+                <a class="fg-reset" onclick="resetAll()" style="margin-left:auto">Ponastavi vse</a>
+            </div>
+        </div>
+
+        <div class="products-grid" id="productsGrid">
+
+            <!-- Row 1 -->
+            <div class="product-card fade-up" data-vozila="1" data-oblika="konzolni" onclick="window.location='product.html'" style="cursor:pointer">
+                <img src="images/kategorije/nadstresek_serij_ljw.jpg" alt="Nadstrešek serije LJW">
+                <div class="pc-overlay"></div>
+                <div class="pc-info">
+                    <div class="pc-name">Nadstrešek serije LJW</div>
+                    <div class="pc-arrow"><svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
+                </div>
+            </div>
+            <div class="product-card fade-up d1" data-vozila="1" data-oblika="stebri">
+                <img src="images/kategorije/nadstresek_serije_jm.jpg" alt="Nadstrešek serije JM">
+                <div class="pc-overlay"></div>
+                <div class="pc-info">
+                    <div class="pc-name">Nadstrešek serije JM</div>
+                    <div class="pc-arrow"><svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
+                </div>
+            </div>
+            <div class="product-card fade-up d2" data-vozila="1" data-oblika="meri">
+                <img src="images/kategorije/nadstresek_serije_jt.jpg" alt="Nadstrešek serije JT">
+                <div class="pc-overlay"></div>
+                <div class="pc-info">
+                    <div class="pc-name">Nadstrešek serije JT</div>
+                    <div class="pc-arrow"><svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
+                </div>
+            </div>
+
+            <!-- Row 2 -->
+            <div class="product-card fade-up" data-vozila="1" data-oblika="konzolni">
+                <img src="images/kategorije/nadstresek_serije_pjr_1_vozilo.jpg" alt="Nadstrešek serije PJR - 1 vozilo">
+                <div class="pc-overlay"></div>
+                <div class="pc-info">
+                    <div class="pc-name">Nadstrešek serije PJR - 1 vozilo</div>
+                    <div class="pc-arrow"><svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
+                </div>
+            </div>
+            <div class="product-card fade-up d1" data-vozila="2" data-oblika="stebri">
+                <img src="images/kategorije/nadstresek_serije_pjr_2ali_vec.jpg" alt="Nadstrešek serije PJR - 2 ali več vozil">
+                <div class="pc-overlay"></div>
+                <div class="pc-info">
+                    <div class="pc-name">Nadstrešek serije PJR - 2 ali več vozil</div>
+                    <div class="pc-arrow"><svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
+                </div>
+            </div>
+            <div class="product-card fade-up d2" data-vozila="2" data-oblika="stebri">
+                <img src="images/kategorije/nadstresek_serijepjr_mc.jpg" alt="Nadstrešek serije PJR - MC">
+                <div class="pc-overlay"></div>
+                <div class="pc-info">
+                    <div class="pc-name">Nadstrešek serije PJR - MC</div>
+                    <div class="pc-arrow"><svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
+                </div>
+            </div>
+
+            <!-- Row 3 -->
+            <div class="product-card fade-up" data-vozila="1" data-oblika="konzolni">
+                <img src="images/kategorije/nadstresek_serije_VD_1.jpg" alt="Nadstrešek serije VD - 1 vozilo">
+                <div class="pc-overlay"></div>
+                <div class="pc-info">
+                    <div class="pc-name">Nadstrešek serije VD - 1 vozilo</div>
+                    <div class="pc-arrow"><svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
+                </div>
+            </div>
+            <div class="product-card fade-up d1" data-vozila="2" data-oblika="konzolni">
+                <img src="images/kategorije/nadstresek_serije_VD_LC_2.jpg" alt="Nadstrešek serije VD - LC za 2 ali več">
+                <div class="pc-overlay"></div>
+                <div class="pc-info">
+                    <div class="pc-name">Nadstrešek serije VD - LC za 2 ali več</div>
+                    <div class="pc-arrow"><svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
+                </div>
+            </div>
+            <div class="product-card fade-up d2" data-vozila="2" data-oblika="stebri">
+                <img src="images/kategorije/nadstresek_serije_vd_mc_2.jpg" alt="Nadstrešek serije VD - MC za 2 ali več">
+                <div class="pc-overlay"></div>
+                <div class="pc-info">
+                    <div class="pc-name">Nadstrešek serije VD - MC za 2 ali več</div>
+                    <div class="pc-arrow"><svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
+                </div>
+            </div>
+
+            <!-- Row 4 -->
+            <div class="product-card fade-up" data-vozila="1" data-oblika="meri">
+                <img src="images/kategorije/nadstresek_serije_vrs_1.jpg" alt="Nadstrešek serije VRS - 1 vozilo">
+                <div class="pc-overlay"></div>
+                <div class="pc-info">
+                    <div class="pc-name">Nadstrešek serije VRS - 1 vozilo</div>
+                    <div class="pc-arrow"><svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
+                </div>
+            </div>
+            <div class="product-card fade-up d1" data-vozila="3" data-oblika="stebri">
+                <img src="images/kategorije/nadstresek_serije_vrs_lc_2.jpg" alt="Nadstrešek serije VRS - LC za 2 ali več">
+                <div class="pc-overlay"></div>
+                <div class="pc-info">
+                    <div class="pc-name">Nadstrešek serije VRS - LC za 2 ali več</div>
+                    <div class="pc-arrow"><svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
+                </div>
+            </div>
+            <div class="product-card fade-up d2" data-vozila="3" data-oblika="meri">
+                <img src="images/kategorije/nadstresek_serije_vrs-mc-2.jpg" alt="Nadstrešek serije VRS - MC/HC za 2 ali več">
+                <div class="pc-overlay"></div>
+                <div class="pc-info">
+                    <div class="pc-name">Nadstrešek serije VRS - MC/HC za 2 ali več</div>
+                    <div class="pc-arrow"><svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
+                </div>
+            </div>
+
+            <!-- No results -->
+            <div class="no-results" id="noResults">
+                <div class="nr-icon">🔍</div>
+                <div class="nr-title">Ni rezultatov</div>
+                <p class="nr-sub">Za izbrane filtre ni ustreznih izdelkov.<br>Poskusite z drugačno kombinacijo.</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
 
 <!-- ── WHY ── -->
 <section class="why">
@@ -225,191 +409,6 @@
   </div>
 </section>
 
-<!-- ── PRODUCTS ── -->
-<section class="products">
-  <div class="products-inner">
-      <div class="sec-head fu" style="margin-bottom:24px;">
-          <div><div class="st2">Naši <em>izdelki</em></div>
-          <small>Naj se vaš dom ne začne šele za vrati. Začnite ga graditi z dovršenim nadstreškom.</small></div>
-      </div>
-
-    <!-- ── FILTER BAR ── -->
-    <div class="filter-bar fade-up">
-      <div class="filter-divider"></div>
-
-      <!-- Group 1: Število vozil (radio) -->
-      <div>
-        <div class="filter-group-label">
-          1. Število vozil
-        </div>
-        <div class="filter-options" id="grp-vozila">
-          <div class="fo" data-group="vozila" data-val="1" onclick="selectFo(this,'vozila')">
-            <div class="fo-radio"></div>
-            <div class="fo-icon"><span class="material-icons">directions_car</span></div>
-            <div class="fo-label">1 vozilo</div>
-          </div>
-          <div class="fo" data-group="vozila" data-val="2" onclick="selectFo(this,'vozila')">
-            <div class="fo-radio"></div>
-            <div class="fo-icon"><span class="material-icons">local_shipping</span></div>
-            <div class="fo-label">2 vozili</div>
-          </div>
-          <div class="fo" data-group="vozila" data-val="3" onclick="selectFo(this,'vozila')">
-            <div class="fo-radio"></div>
-            <div class="fo-icon"><span class="material-icons">airport_shuttle</span></div>
-            <div class="fo-label">3 ali več vozil</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Group 2: Oblika nadstreška (checkbox) -->
-      <div>
-        <div class="filter-group-label">
-          2. Oblika nadstreška
-        </div>
-        <div class="filter-options" id="grp-oblika">
-          <div class="fo" data-group="oblika" data-val="konzolni" onclick="toggleFo(this)">
-            <div class="fo-check"></div>
-            <div class="fo-icon"><span class="material-icons">roofing</span></div>
-            <div class="fo-label">Konzolni</div>
-          </div>
-          <div class="fo" data-group="oblika" data-val="stebri" onclick="toggleFo(this)">
-            <div class="fo-check"></div>
-            <div class="fo-icon"><span class="material-icons">garage</span></div>
-            <div class="fo-label">Na 4 stebrih</div>
-          </div>
-          <div class="fo" data-group="oblika" data-val="meri" onclick="toggleFo(this)">
-            <div class="fo-check"></div>
-            <div class="fo-icon"><span class="material-icons">design_services</span></div>
-            <div class="fo-label">Po meri</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- result strip -->
-      <div class="filter-result-strip">
-        <span class="material-icons">filter_list</span>
-        Prikazujem <strong id="resultCount">12</strong> izdelkov
-        <div class="filter-tags" id="filterTags"></div>
-        <a class="fg-reset" onclick="resetAll()" style="margin-left:auto">Ponastavi vse</a>
-      </div>
-    </div>
-
-    <div class="products-grid" id="productsGrid">
-
-      <!-- Row 1 -->
-      <div class="product-card fade-up" data-vozila="1" data-oblika="konzolni" onclick="window.location='product.html'" style="cursor:pointer">
-        <img src="images/kategorije/nadstresek_serij_ljw.jpg" alt="Nadstrešek serije LJW">
-        <div class="pc-overlay"></div>
-        <div class="pc-info">
-          <div class="pc-name">Nadstrešek serije LJW</div>
-          <div class="pc-arrow"><svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
-        </div>
-      </div>
-      <div class="product-card fade-up d1" data-vozila="1" data-oblika="stebri">
-        <img src="images/kategorije/nadstresek_serije_jm.jpg" alt="Nadstrešek serije JM">
-        <div class="pc-overlay"></div>
-        <div class="pc-info">
-          <div class="pc-name">Nadstrešek serije JM</div>
-          <div class="pc-arrow"><svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
-        </div>
-      </div>
-      <div class="product-card fade-up d2" data-vozila="1" data-oblika="meri">
-        <img src="images/kategorije/nadstresek_serije_jt.jpg" alt="Nadstrešek serije JT">
-        <div class="pc-overlay"></div>
-        <div class="pc-info">
-          <div class="pc-name">Nadstrešek serije JT</div>
-          <div class="pc-arrow"><svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
-        </div>
-      </div>
-
-      <!-- Row 2 -->
-      <div class="product-card fade-up" data-vozila="1" data-oblika="konzolni">
-        <img src="images/kategorije/nadstresek_serije_pjr_1_vozilo.jpg" alt="Nadstrešek serije PJR - 1 vozilo">
-        <div class="pc-overlay"></div>
-        <div class="pc-info">
-          <div class="pc-name">Nadstrešek serije PJR - 1 vozilo</div>
-          <div class="pc-arrow"><svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
-        </div>
-      </div>
-      <div class="product-card fade-up d1" data-vozila="2" data-oblika="stebri">
-        <img src="images/kategorije/nadstresek_serije_pjr_2ali_vec.jpg" alt="Nadstrešek serije PJR - 2 ali več vozil">
-        <div class="pc-overlay"></div>
-        <div class="pc-info">
-          <div class="pc-name">Nadstrešek serije PJR - 2 ali več vozil</div>
-          <div class="pc-arrow"><svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
-        </div>
-      </div>
-      <div class="product-card fade-up d2" data-vozila="2" data-oblika="stebri">
-        <img src="images/kategorije/nadstresek_serijepjr_mc.jpg" alt="Nadstrešek serije PJR - MC">
-        <div class="pc-overlay"></div>
-        <div class="pc-info">
-          <div class="pc-name">Nadstrešek serije PJR - MC</div>
-          <div class="pc-arrow"><svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
-        </div>
-      </div>
-
-      <!-- Row 3 -->
-      <div class="product-card fade-up" data-vozila="1" data-oblika="konzolni">
-        <img src="images/kategorije/nadstresek_serije_VD_1.jpg" alt="Nadstrešek serije VD - 1 vozilo">
-        <div class="pc-overlay"></div>
-        <div class="pc-info">
-          <div class="pc-name">Nadstrešek serije VD - 1 vozilo</div>
-          <div class="pc-arrow"><svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
-        </div>
-      </div>
-      <div class="product-card fade-up d1" data-vozila="2" data-oblika="konzolni">
-        <img src="images/kategorije/nadstresek_serije_VD_LC_2.jpg" alt="Nadstrešek serije VD - LC za 2 ali več">
-        <div class="pc-overlay"></div>
-        <div class="pc-info">
-          <div class="pc-name">Nadstrešek serije VD - LC za 2 ali več</div>
-          <div class="pc-arrow"><svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
-        </div>
-      </div>
-      <div class="product-card fade-up d2" data-vozila="2" data-oblika="stebri">
-        <img src="images/kategorije/nadstresek_serije_vd_mc_2.jpg" alt="Nadstrešek serije VD - MC za 2 ali več">
-        <div class="pc-overlay"></div>
-        <div class="pc-info">
-          <div class="pc-name">Nadstrešek serije VD - MC za 2 ali več</div>
-          <div class="pc-arrow"><svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
-        </div>
-      </div>
-
-      <!-- Row 4 -->
-      <div class="product-card fade-up" data-vozila="1" data-oblika="meri">
-        <img src="images/kategorije/nadstresek_serije_vrs_1.jpg" alt="Nadstrešek serije VRS - 1 vozilo">
-        <div class="pc-overlay"></div>
-        <div class="pc-info">
-          <div class="pc-name">Nadstrešek serije VRS - 1 vozilo</div>
-          <div class="pc-arrow"><svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
-        </div>
-      </div>
-      <div class="product-card fade-up d1" data-vozila="3" data-oblika="stebri">
-        <img src="images/kategorije/nadstresek_serije_vrs_lc_2.jpg" alt="Nadstrešek serije VRS - LC za 2 ali več">
-        <div class="pc-overlay"></div>
-        <div class="pc-info">
-          <div class="pc-name">Nadstrešek serije VRS - LC za 2 ali več</div>
-          <div class="pc-arrow"><svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
-        </div>
-      </div>
-      <div class="product-card fade-up d2" data-vozila="3" data-oblika="meri">
-        <img src="images/kategorije/nadstresek_serije_vrs-mc-2.jpg" alt="Nadstrešek serije VRS - MC/HC za 2 ali več">
-        <div class="pc-overlay"></div>
-        <div class="pc-info">
-          <div class="pc-name">Nadstrešek serije VRS - MC/HC za 2 ali več</div>
-          <div class="pc-arrow"><svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
-        </div>
-      </div>
-
-      <!-- No results -->
-      <div class="no-results" id="noResults">
-        <div class="nr-icon">🔍</div>
-        <div class="nr-title">Ni rezultatov</div>
-        <p class="nr-sub">Za izbrane filtre ni ustreznih izdelkov.<br>Poskusite z drugačno kombinacijo.</p>
-      </div>
-
-    </div>
-  </div>
-</section>
 
 <!-- ── PROCESS ── -->
 <section class="proces">

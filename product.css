@@ -54,7 +54,7 @@
 .ph-badge{
   position:absolute;top:18px;left:18px;
   background:var(--brand);color:#fff;
-  border-radius:8px;padding:10px 14px;
+  border-radius:12px;padding:10px 14px;
   display:flex;align-items:center;gap:8px;
 }
 .ph-badge svg{width:14px;height:14px;stroke:#fff;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}
@@ -196,7 +196,7 @@
 .color-item:last-child{border:none}
 .color-item:hover{background:var(--brand-pale)}
 .color-swatch{
-  width:28px;height:28px;border-radius:6px;
+  width:28px;height:28px;border-radius:12px;
   border:1px solid rgba(0,0,0,.12);flex-shrink:0;
 }
 .color-name{font-size:12px;color:var(--text);font-weight:500}
@@ -259,7 +259,7 @@
   opacity:0;pointer-events:none;transition:opacity .3s;
 }
 .lightbox.open{opacity:1;pointer-events:all}
-.lb-img{max-width:90vw;max-height:86vh;border-radius:8px;display:block}
+.lb-img{max-width:90vw;max-height:86vh;border-radius:12px;display:block}
 .lb-close{
   position:absolute;top:20px;right:24px;
   width:44px;height:44px;border-radius:50%;
@@ -349,7 +349,7 @@
 .btn-accent-sm{
   display:inline-flex;align-items:center;gap:8px;
   background:var(--cta);color:#fff;
-  padding:13px 24px;border-radius:4px;
+  padding:13px 24px;border-radius:12px;
   font-size:13px;font-weight:600;
   text-decoration:none;transition:all .2s;
 }
@@ -407,7 +407,7 @@
 .btn-outline-acc{
   display:inline-flex;align-items:center;gap:8px;
   border:1.5px solid var(--cta);color:var(--cta);
-  padding:13px 28px;border-radius:4px;
+  padding:13px 28px;border-radius:12px;
   font-size:13px;font-weight:600;
   text-decoration:none;transition:all .2s;
 }
@@ -458,7 +458,7 @@
   .ph-media{order:-1}
   .ph-main-img{border-radius:12px;aspect-ratio:16/10}
   .ph-thumbs{gap:8px;margin-top:10px}
-  .ph-thumb{border-radius:8px}
+  .ph-thumb{border-radius:12px}
   .ph-badge{top:12px;left:12px;padding:8px 10px}
   .ph-badge-text{font-size:10px}
 
@@ -492,7 +492,7 @@
   .gal-item img{aspect-ratio:1/1}
 
   /* LIGHTBOX */
-  .lb-img{max-width:96vw;max-height:80vh;border-radius:4px}
+  .lb-img{max-width:96vw;max-height:80vh;border-radius:12px}
   .lb-close{top:12px;right:12px;width:38px;height:38px}
   .lb-nav{width:40px;height:40px}
   .lb-prev{left:8px}
@@ -536,7 +536,7 @@
   .ph-desc,.ph-desc2{font-size:12px}
   .ph-main-img{border-radius:10px}
   .ph-thumbs{gap:6px}
-  .ph-thumb{border-radius:6px}
+  .ph-thumb{border-radius:12px}
 
   /* FEATURES */
   .feat-block{grid-template-columns:52px 1fr;gap:12px;padding:18px 0}
