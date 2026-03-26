@@ -133,6 +133,13 @@
 }
 .fh-desc{font-size:14px;color:var(--muted);line-height:1.8;font-weight:300}
 
+/* ── WHY FULL WIDTH ── */
+.why-inner-full{max-width:1100px;margin:0 auto;display:flex;flex-direction:column;gap:52px}
+.content-block-full{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:center}
+.content-block-full.reverse{grid-template-columns:1fr 1fr}
+.content-block-full.reverse .cb-text{order:1}
+.content-block-full.reverse .cb-img{order:2}
+
 /* ── TECH SPECS ── */
 .specs{
   padding:80px 5%;
