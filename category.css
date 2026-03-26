@@ -303,14 +303,9 @@
 
 /* ── FILTER BAR ── */
 .filter-bar{
-  background:var(--off);
-  border:1px solid var(--border);
   border-radius:16px;
-  padding:28px 32px;
+  padding:0;
   margin-bottom:40px;
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:24px;
   position:relative;
 }
 .filter-group-label{
@@ -324,8 +319,9 @@
   transition:color .2s;font-weight:400;letter-spacing:0;text-transform:none;
 }
 .fg-reset:hover{color:var(--brand)}
-.filter-options{display:flex;gap:10px;flex-wrap:wrap}
+.filter-options{display:flex;gap:10px;flex-wrap:wrap; justify-content: center;}
 .fo{
+    width: 120px;
   display:flex;flex-direction:column;align-items:center;gap:8px;
   padding:14px 18px;border-radius:10px;
   border:1.5px solid var(--border);
