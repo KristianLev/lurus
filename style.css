@@ -40,8 +40,10 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;height:66px;display:flex;ali
 .hero-text h1 em{font-weight:300;font-style:italic;color:rgba(255,255,255,.6)}
 .hero-text p{font-size:16px;color:rgba(255,255,255,1);line-height:1.75;font-weight:300;margin-bottom:28px;}
 .hero-btns{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:24px; justify-content: center;}
-.btn-white{display:inline-flex;align-items:center;gap:8px;background:var(--cta);color:#fff;padding:13px 26px;border-radius:12px;font-size:16px;font-weight:600;text-decoration:none;transition:all .2s}
-.btn-white:hover{background:var(--cta-hover);gap:12px}
+.btn-white{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(to right,#1b3764,#2EAAC7);color:#fff;padding:13px 26px;border-radius:12px;font-size:16px;font-weight:600;text-decoration:none;position:relative;overflow:hidden;z-index:1;transition:gap .2s}
+.btn-white::after{content:'';position:absolute;inset:0;background:#2EAAC7;z-index:-1;opacity:0;transition:opacity .35s ease}
+.btn-white:hover::after{opacity:1}
+.btn-white:hover{gap:12px}
 .btn-ghost-w{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(255,255,255,.25);color:rgba(255,255,255,.75);padding:13px 26px;border-radius:12px;font-size:16px;font-weight:400;text-decoration:none;transition:all .2s}
 .btn-ghost-w:hover{border-color:rgba(255,255,255,.5);color:#fff;gap:12px}
 .hero-hint{display:flex;align-items:center;gap:8px;font-size:16px;color:rgba(255,255,255,.8)}
@@ -58,7 +60,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;height:66px;display:flex;ali
 .popup.show{opacity:1;pointer-events:all;transform:scale(1) translateY(0)}
 .popup.above{bottom:calc(100% + 12px);left:50%;margin-left:-110px}
 .popup.below{top:calc(100% + 12px);left:50%;margin-left:-110px}
-.popup.left{top:50%;right:calc(100% + 12px);margin-top:-55px}
+.popup.left{top:50%;right:calc(100% + 12px);margin-top:-115px}
 .popup.right{top:50%;left:calc(100% + 12px);margin-top:-55px}
 .pop-icon{width:34px;height:34px;background:var(--brand-light);border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:10px}
 .pop-icon svg{width:17px;height:17px;stroke:var(--brand);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
@@ -377,7 +379,7 @@ footer{background:var(--brand-dark);padding:60px 5% 28px}
 }
 
 /* ── MOBILE: max-width 768px ── */
-@media(max-width:768px){
+@media(max-width:900px){
   /* USP SECTION */
   .usp-inner{grid-template-columns:repeat(2,1fr)}
   .usp-item:not(:last-child)::after{display:none}
