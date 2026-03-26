@@ -22,7 +22,7 @@
             <li><a href="#">O nas</a></li>
             <li><a href="#">Kontakt</a></li>
         </ul>
-        <a href="#" class="nav-cta">Brezplačna ponudba</a>
+        <a href="#" class="nav-cta">Konfigurator</a>
     </div>
 </nav>
 
