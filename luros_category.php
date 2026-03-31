@@ -250,7 +250,7 @@ nav{
 /* ── PROCESS ── */
 .process{
   padding:88px 5%;
-  background:var(--brand);
+  background: #eff5ff;
   position:relative;overflow:hidden;
 }
 .process::before{
